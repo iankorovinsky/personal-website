@@ -28,6 +28,7 @@ who am i really?
 - accepted to uc berkeley met (50 student cohort), nyu stern, and waterloo cs/se
 - $420k+ in scholarships at canadian schools (schulich leader @ mcgill, national president's scholarship @ western, etc.)
 - enrolled at waterloo software engineering (💜)
+- living in nyc for co-op
 
 where am i right now?
 - interning at bloomberg as a swe intern
