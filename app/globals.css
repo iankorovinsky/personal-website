@@ -12,18 +12,27 @@ body {
   font-family: var(--font-primary), Arial;
   color: #FFF;
   text-align: center;
-  font-size: 96px;
+  font-size: 48px;
+  line-height: 1.2;
   font-weight: 700;
-  line-height: normal;
+  
+  @media (min-width: 768px) {
+    font-size: 96px;
+  }
 }
 
 .title-subtext{
   color: #FFF;
   text-align: center;
   font-family: var(--font-secondary), Helvetica;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.5;
+  padding: 0 16px;
+  
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .social-icon{
