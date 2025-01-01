@@ -13,7 +13,7 @@ export default function StoryButton() {
         className="button mx-auto flex justify-center transform hover:scale-110 transition-transform duration-200 hover:no-underline"
         onClick={() => setIsStoryModalOpen(true)}
       >
-        My Story
+        my story
       </Button>
 
       <Dialog open={isStoryModalOpen} onOpenChange={setIsStoryModalOpen}>
