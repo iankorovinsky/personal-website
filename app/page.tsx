@@ -130,8 +130,19 @@ supports real-time collaboration, keyboard shortcuts for all major actions, full
           linkText="reels"
         />
       </div>
-      <div className="text-sm font-[var(--font-secondary)] text-center pb-8 text-white">
-        built with ❤️, 🪿, and 🧋 in waterloo
+      <div className="text-sm font-[var(--font-secondary)] text-center pb-8 text-white flex flex-col gap-2">
+        <div>built with ❤️, 🪿, and 🧋 in waterloo</div>
+        <div>
+          inspired by{" "}
+          <a 
+            href="https://rajan.sh" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:opacity-70 transition-opacity underline"
+          >
+            rajan agarwal
+          </a>
+        </div>
       </div>
     </div>
   );
