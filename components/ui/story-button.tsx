@@ -24,7 +24,7 @@ export default function StoryButton() {
             </DialogTitle>
           </DialogHeader>
           <div className="text-zinc-300 font-[var(--font-secondary)] text-sm whitespace-pre-line">
-            {`hey 👋\n\n i'm ian, and i'm a software engineering undergrad at the university of waterloo. here's a very quick tl;dr of my life so far:\n\n
+            {`hey 👋\n\n my name is ian, and i'm a software engineering undergrad at the university of waterloo. here's a very quick tl;dr of my life so far:\n\n
             • born in toronto, canada 🍁\n
             • attended an accelerated gifted program from grade 4-12 at the academy for gifted children 🎓\n
             • got involved in my high school community starting in grade 9, joining and leading clubs like DECA and student council 🎯\n

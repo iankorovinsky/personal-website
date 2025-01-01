@@ -1,11 +1,13 @@
 import Image from "next/image";
 import ProjectCard from "@/components/ui/project-card";
 import StoryButton from "@/components/ui/story-button"
+import Spotlight from "@/components/ui/spotlight"
 
 export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-black">
+      <Spotlight />
       <div>
         <h1 className="title pt-24 mx-auto">IAN KOROVINSKY</h1>
         <h2 className="title-subtext pt-8 mx-auto">
