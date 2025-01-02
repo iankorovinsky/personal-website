@@ -1,8 +1,17 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getPostBySlug } from '@/lib/mdx'
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
-  const { meta, content } = await getPostBySlug(params.slug)
+export async function generateStaticParams() {
+  return [{ slug: 'coming-soon' }]
+}
+
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const resolvedParams = await params
+  const { meta, content } = await getPostBySlug(resolvedParams.slug)
 
   return (
     <div className="min-h-screen bg-black text-white p-8 md:p-16">

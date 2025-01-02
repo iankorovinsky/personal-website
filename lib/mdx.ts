@@ -4,6 +4,14 @@ import matter from 'gray-matter'
 
 const POSTS_PATH = path.join(process.cwd(), 'app/content/blog')
 
+interface BlogPost {
+  title: string;
+  subtitle: string;
+  date: string;
+  slug: string;
+  preview: string;
+}
+
 export async function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.mdx$/, '')
   const filePath = path.join(POSTS_PATH, `${realSlug}.mdx`)
@@ -28,7 +36,7 @@ export async function getAllPosts() {
       const { data } = matter(fileContent)
 
       return {
-        ...data,
+        ...(data as BlogPost),
         slug: realSlug,
       }
     })

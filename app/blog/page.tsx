@@ -1,8 +1,16 @@
 import BlogCard from "@/components/ui/blog-card";
 import { getAllPosts } from "@/lib/mdx";
 
+interface BlogPost {
+  title: string;
+  subtitle: string;
+  date: string;
+  slug: string;
+  preview: string;
+}
+
 export default async function Blog() {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts() as BlogPost[];
 
   return (
     <div className="min-h-screen bg-black text-white p-8 md:p-16">
