@@ -59,9 +59,43 @@ const config: Config = {
   				'var(--font-secondary)'
   			]
   		},
+  		typography: {
+  			DEFAULT: {
+  				css: {
+  					color: 'white',
+  					a: {
+  						color: 'white',
+  						'&:hover': {
+  							color: '#d1d5db',
+  						},
+  					},
+  					h1: {
+  						color: 'white',
+  					},
+  					h2: {
+  						color: 'white',
+  					},
+  					h3: {
+  						color: 'white',
+  					},
+  					strong: {
+  						color: 'white',
+  					},
+  					code: {
+  						color: 'white',
+  					},
+  					blockquote: {
+  						color: '#d1d5db',
+  					},
+  				},
+  			},
+  		},
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require("tailwindcss-animate")
+  ],
 };
 
 export default config;

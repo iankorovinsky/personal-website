@@ -1,30 +1,12 @@
-"use client"
-
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-
-export default function StoryButton() {
-  const [isStoryModalOpen, setIsStoryModalOpen] = useState(false)
-
+export default function About() {
   return (
-    <>
-      <Button 
-        className="button mx-auto flex justify-center transform hover:scale-110 transition-transform duration-200 hover:no-underline"
-        onClick={() => setIsStoryModalOpen(true)}
-      >
-        my story
-      </Button>
-
-      <Dialog open={isStoryModalOpen} onOpenChange={setIsStoryModalOpen}>
-        <DialogContent className="bg-zinc-900 text-white border-zinc-800 max-h-[90vh] overflow-y-auto rounded-xl pt-6">
-          <DialogHeader>
-            <DialogTitle className="text-3xl font-bold tracking-wide uppercase mb-2 font-[var(--font-primary)]">
-              My Story
-            </DialogTitle>
-          </DialogHeader>
-          <div className="text-zinc-300 font-[var(--font-secondary)] text-sm whitespace-pre-line">
-            {`hey 👋\n\n my name is ian, and i'm a software engineering undergrad at the university of waterloo. here's a very quick tl;dr of my life so far:\n\n
+    <div className="min-h-screen bg-black text-white p-8 md:p-16">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold tracking-wide uppercase mb-8 font-[var(--font-primary)]">
+          My Story
+        </h1>
+        <div className="text-zinc-300 font-[var(--font-secondary)] text-sm whitespace-pre-line space-y-4">
+          {`hey 👋\n\n my name is ian, and i'm a software engineering undergrad at the university of waterloo. here's a very quick tl;dr of my life so far:\n\n
             • born in toronto, canada 🍁\n
             • attended an accelerated gifted program from grade 4-12 at the academy for gifted children 🎓\n
             • got involved in my high school community starting in grade 9, joining and leading clubs like DECA and student council 🎯\n
@@ -55,9 +37,8 @@ export default function StoryButton() {
             • returned for my second internship at sibli, working on financial data parsing algorithms 📊\n
             • worked on cool side projects like axiom - a custom ide for formal proofs, and blocks - a smart contract compiler for starknet 💻\n
             • starting my second internship at bloomberg on the asset and investment management compliace ai team in winter 2025 🚀\n`}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
+        </div>
+      </div>
+    </div>
   )
 } 

@@ -1,40 +1,16 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
-import { Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/navbar";
+import Spotlight from "@/components/ui/spotlight";
 
-const aeonik = localFont({
-  src: [
-    {
-      path: '../public/fonts/Aeonik-Bold.otf',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Aeonik-BoldItalic.otf',
-      style: 'italic',
-    },
-    {
-      path: '../public/fonts/Aeonik-Light.otf',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Aeonik-LightItalic.otf',
-      style: 'italic',
-    },
-    {
-      path: '../public/fonts/Aeonik-Regular.otf',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Aeonik-RegularItalic.otf',
-      style: 'italic',
-    },
-  ],
-  variable: '--font-secondary',
+const geistSans = Geist({
+  variable: "--font-primary",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-primary",
+  variable: "--font-secondary",
   subsets: ["latin"],
 });
 
@@ -50,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable} ${aeonik.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Spotlight />
+        <Navbar />
         {children}
       </body>
     </html>
