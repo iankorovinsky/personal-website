@@ -33,10 +33,10 @@ export default function ProjectCard({ title, subtitle, imageSrc, url, body, link
           />
         </div>
         <CardContent className="p-6">
-          <h2 className="text-zinc-100 text-2xl font-bold tracking-wide uppercase mb-1 font-[var(--font-primary)]">
+          <h2 className="text-zinc-100 text-2xl font-bold tracking-wide uppercase mb-1 font-primary">
             {title}
           </h2>
-          <p className="text-zinc-400 text-sm font-[var(--font-secondary)]">
+          <p className="text-zinc-400 text-sm font-secondary">
             {subtitle}
           </p>
         </CardContent>
@@ -45,10 +45,10 @@ export default function ProjectCard({ title, subtitle, imageSrc, url, body, link
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="bg-zinc-900 text-white border-zinc-800 max-h-[90vh] overflow-y-auto rounded-xl pt-6">
           <DialogHeader>
-            <DialogTitle className="text-3xl font-bold tracking-wide uppercase mb-2 font-[var(--font-primary)]">
+            <DialogTitle className="text-3xl font-bold tracking-wide uppercase mb-2 font-primary">
               {title}
             </DialogTitle>
-            <DialogDescription className="text-zinc-400 text-lg font-[var(--font-secondary)]">
+            <DialogDescription className="text-zinc-400 text-lg font-secondary">
               {subtitle}
             </DialogDescription>
           </DialogHeader>
@@ -60,13 +60,13 @@ export default function ProjectCard({ title, subtitle, imageSrc, url, body, link
               className="object-cover rounded-lg"
             />
           </div>
-          <p className="text-zinc-300 mb-4 font-[var(--font-secondary)] text-sm whitespace-pre-line">
+          <p className="text-zinc-300 mb-4 font-secondary text-sm whitespace-pre-line">
             {body}
           </p>
           <Button 
             asChild
             variant="default"
-            className="font-[var(--font-primary)] flex justify-between items-center w-full bg-zinc-950 hover:bg-zinc-800 transition-colors rounded-[4px]"
+            className="font-primary flex justify-between items-center w-full bg-zinc-950 hover:bg-zinc-800 transition-colors rounded-[4px]"
           >
             <a 
               href={url}
