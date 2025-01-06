@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistMono } from 'geist/font/mono';
+import localFont from 'next/font/local';
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import Spotlight from "@/components/ui/spotlight";
 
-const geistSans = Geist({
-  variable: "--font-primary",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-secondary",
-  subsets: ["latin"],
+const primary_font = GeistMono;
+const secondary_font = localFont({
+  src: '../public/fonts/Aeonik-Regular.otf',
+  variable: '--font-secondary'
 });
 
 export const metadata: Metadata = {
@@ -26,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${primary_font.variable} ${secondary_font.variable} antialiased`}>
         <Spotlight />
         <Navbar />
         {children}
