@@ -20,7 +20,7 @@ export const projects = [
     subtitle: "semantic search for memories",
     imageSrc: "/images/portal.jpeg",
     url: "https://www.youtube.com/watch?v=Vmupugz2M1s",
-    body: `created an ai-powered wearable device for semantic search on memories, and experimented with emulating human consciousness\n\nwon finalist at hack the north 2024 and continued to work on the project during buildspace n&w s5 in summer 2024`,
+    body: `created an ai-powered wearable device for semantic search on memories, and experimented with emulating human consciousness\n\nwon finalist at hack the north 2023 and continued to work on the project during buildspace n&w s5 in summer 2024`,
     linkText: "live demo"
   },
   {

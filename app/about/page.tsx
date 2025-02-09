@@ -17,7 +17,7 @@ export default function About() {
             • launched floato - a drone photography and videography company - at 16, working to build a portfolio of work and clients 🚁\n
             • realized i loved drone videography as a hobby but not as a commercial business so a scaled-down to rooftop inspections and honed in on my other interests 🎥\n
             • joined ontario deca as 1 of 8 provincial officers, hosting events across the province for 15K+ students and raising over $150K to host our yearly competitions. working at such a high-impact and large scale was genuinely one of the most rewarding experiences of my life and altered my perspective on what i want to do with my life 💫\n
-            • went to my first in-person hackathon (hack the north 2023) and built a gesture-controlled drone. made some pretty awesome friends too <3 🛠️\n
+            • went to my first in-person hackathon (hack the north 2022) and built a gesture-controlled drone. made some pretty awesome friends too <3 🛠️\n
             • realized that i loved business but i wanted to pursue the intersection of finance and technology more so i pivoted all of my college applications to software engineering and computer science programs 💡\n
             • applied to 23+ universities across canada and the us over the course of 4 months 📝\n
             • made a handshake agreeement to go to a hackathon with a friend of a friend which ended up being my first hackathon win, kickstarted my swe career, and was the beginning ofa life-long friendship 🤝\n
