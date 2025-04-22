@@ -20,11 +20,7 @@ export default function Navbar() {
     { href: "/about", label: "[about]" },
     { href: "/experience", label: "[experience]" },
     { href: "/projects", label: "[projects]" },
-<<<<<<< HEAD
     // { href: "/blog", label: "[blog]" },
-=======
-    { href: "/blog", label: "[blog]" },
->>>>>>> f6569d02d953d1c23556f36a57ca7d5c0ba547f5
   ]
 
   return (
