@@ -34,9 +34,12 @@ export default function About() {
             • joined hack the north as a logistics organizer, organizing workshops and mentorship for 1000+ hackers 🎪\n
             • interned at bloomberg in summer 2024, working on a novel semantic search framework, and fell in love with hiking all over again 🏔️\n
             • started 2A at uwaterloo and helped host hack the north in september - best weekend of the semester by far 🎉\n
-            • returned for my second internship at sibli, working on financial data parsing algorithms 📊\n
+            • returned for my second internship at sibli, working on financial data parsing and graph algorithms 📊\n
             • worked on cool side projects like axiom - a custom ide for formal proofs, and blocks - a smart contract compiler for starknet 💻\n
-            • starting my second internship at bloomberg on the asset and investment management compliace ai team in winter 2025 🚀\n`}
+            • interned at bloomberg once again in winter 2025, once again on the buy-side compliance ai team, and worked on text classification, recommendation engines, one of the first multi-agent projects at bloomberg, and more 🚀\n
+            • co-authored a paper, advocated for more youth involvement in the modern workforce, and gave feedback on projects relating to youth entrepreneurship and innovation on the uwaterloo youth and innovation project national advisory council 📃\n
+            • currently co-directing hack the north 2025, canada's largest hackathon ⚙️\n
+            `}
         </div>
       </div>
     </div>

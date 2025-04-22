@@ -16,7 +16,7 @@ export default function Home() {
           <br />
           co-director @ hack the north
           <br />
-          ai @ bloomberg
+          2x ai @ bloomberg
         </h2>
         
         <div className="flex gap-6 justify-center items-center mt-12 pb-8">

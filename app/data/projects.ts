@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "boat",
+    title: "Boat",
     subtitle: "self-driving rc",
     imageSrc: "/images/boat.webp",
     url: "https://www.rajan.sh/work/self-driving",
@@ -8,7 +8,7 @@ export const projects = [
     linkText: "technical breakdown"
   },
   {
-    title: "AXIOM",
+    title: "Axiom",
     subtitle: "custom ide for formal proofs",
     imageSrc: "/images/axiom.png",
     url: "https://x.com/ishaandey_/status/1870977382972273002",
@@ -20,7 +20,7 @@ export const projects = [
     subtitle: "semantic search for memories",
     imageSrc: "/images/portal.jpeg",
     url: "https://www.youtube.com/watch?v=Vmupugz2M1s",
-    body: `created an ai-powered wearable device for semantic search on memories, and experimented with emulating human consciousness\n\nwon finalist at hack the north 2023 and continued to work on the project during buildspace n&w s5 in summer 2024`,
+    body: `created an ai-powered wearable device for semantic search on memories, and experimented with emulating human consciousness\n\nwon finalist at hack the north 2023 and continued to work on the project during buildspace n&w s5 in summer 2024. supported by eigenspace and the velocity cornerstone program`,
     linkText: "live demo"
   },
   {
@@ -28,23 +28,23 @@ export const projects = [
     subtitle: "smart contract compiler for starknet",
     imageSrc: "/images/blocks.png",
     url: "https://dorahacks.io/buidl/20342",
-    body: `built a block-based smart contract builder for starknet's proprietary language cairo\n\nawarded second place overall, best developer tool, and best use of starknet (2nd place, $2000 usd) @ hack western 11\n\ncreated a website that allows users to drag and connect blocks representing smart contracts using react flow editor\n\ndeveloped a mini compiler that converts json (a graph representation of nodes and edges) to cairo, enabling the creation of contracts. deployment is automated with starkli and bash scripts\n\nbuilt a react (reasoning and acting in language models) based ai agent using langgraph and langchain. this agent supports the cairo development process by retrieving data and performing actions\n\nenabled real-time collaboration on smart contracts using liveblocks, websockets, and y.js`,
+    body: `built a block-based smart contract builder for starknet's proprietary language cairo\n\nawarded second place overall, best developer tool, and best use of starknet (2nd place, $2000 usd) @ hack western 11, and deployed the public MVP at the starknet hacker house at ethdenver 2025\n\ncreated a website that allows users to drag and connect blocks representing smart contracts using react flow editor\n\ndeveloped a mini compiler that converts json (a graph representation of nodes and edges) to cairo, enabling the creation of contracts. deployment is automated with starkli and bash scripts\n\nbuilt a react (reasoning and acting in language models) based ai agent using langgraph and langchain. this agent supports the cairo development process by retrieving data and performing actions\n\nenabled real-time collaboration on smart contracts using liveblocks, websockets, and y.js`,
     linkText: "official project"
   },
   {
-    title: "ONTARIO DECA OFFICER",
-    subtitle: "sponsorships, events & tech for competitions",
-    imageSrc: "/images/deca_po.png",
-    url: "https://www.deca.ca",
-    body: "raised $150K+ in sponsorships, organized events for 15,000+ students across ontario, and helped build the website & mobile app for the 2024 ontario deca season",
-    linkText: "website"
+    title: "Crowdfund",
+    subtitle: "crypto trading w/ ai agents",
+    imageSrc: "/images/crowdfund.png",
+    url: "https://github.com/iankorovinsky/crowdfund",
+    body: `created a decentralized crypto trading platform that uses ai agents to automate trading workflows, allowing agents to analyze markets, execute trades, and earn through customizable strategies. supports agent creation with IP protection via story protocol, enabling users to utilize other people's agents, and for developers to receive royalties when their agents are used.\n\nawarded second place (story protocol track, $1500 usd) and best domain name at tartanhacks 2025`,
+    linkText: "github"
   },
   {
-    title: "FLOATO",
-    subtitle: "drone photography and videography",
-    imageSrc: "/images/floato.jpg",
-    url: "https://www.youtube.com/@floato6498",
-    body: `started a business at 16, providing real estate photography and videography services\n\nsupported by a $3000 grant from the government of ontario`,
-    linkText: "reels"
+    title: "VOffice",
+    subtitle: "vr coworking spaces",
+    imageSrc: "/images/voffice.png",
+    url: "https://github.com/16BitNarwhal/Innovation-Challenge",
+    body: `developed a virtual reality co-working platform that reimagines remote collaboration through immersive 3d environments and ai-powered startup advisors for remote teams. built using unity and integrated with openai and aws.`,
+    linkText: "github"
   }
-] 
+]
