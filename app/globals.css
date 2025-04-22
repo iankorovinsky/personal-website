@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-secondary: 'Aeonik';
+  }
+}
+
+.font-primary {
+  font-family: var(--font-geist-mono);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+body {
+  font-family: var(--font-geist-mono), var(--font-secondary);
+}
+
+.title{
+  font-family: var(--font-geist-mono);
+  color: #FFF;
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  
+  @media (min-width: 768px) {
+    font-size: 96px;
+  }
+}
+
+.title-subtext{
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0 16px;
+  
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.social-icon{
+  fill: #FFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  flex-shrink: 0;
+}
+
+.button{
+  background-color: #FFF;
+  color: #000000;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.spotlight {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    400px circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.25),
+    transparent 40%
+  );
+  transition: all 0.5s ease;
+}
