@@ -12,11 +12,11 @@ export default function Home() {
       <div>
         <h1 className="title pt-16 mx-auto pb-4">IAN KOROVINSKY</h1>
         <h2 className="title-subtext pt-8 mx-auto">
-          software engineering @ university of waterloo
-          <br />
-          eng intern @ thrive capital
+        eng intern @ thrive capital
           <br />
           co-director @ hack the north
+          <br />
+          software engineering @ university of waterloo
         </h2>
         
         <div className="flex gap-6 justify-center items-center mt-12 pb-8">

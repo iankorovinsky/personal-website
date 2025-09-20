@@ -1,5 +1,13 @@
 export const experiences = [
   {
+    title: "Thrive Capital",
+    subtitle: "tooling for venture capital",
+    imageSrc: "/images/thrive.jpg",
+    url: "https://www.thrivecap.com",
+    body: `interned at a venture capital firm as a software engineering intern, working on internal tooling that changes the way that people work`,
+    linkText: "website"
+  },
+  {
     title: "Bloomberg",
     subtitle: "ai & trading compliance",
     imageSrc: "/images/bloomberg.jpg",
