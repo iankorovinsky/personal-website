@@ -14,9 +14,9 @@ export default function Home() {
         <h2 className="title-subtext pt-8 mx-auto">
           software engineering @ university of waterloo
           <br />
-          co-director @ hack the north
+          eng intern @ thrive capital
           <br />
-          2x ai @ bloomberg
+          co-director @ hack the north
         </h2>
         
         <div className="flex gap-6 justify-center items-center mt-12 pb-8">
