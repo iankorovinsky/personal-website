@@ -1,73 +1,131 @@
+"use client"
+
+import { useState } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/ui/project-card";
 import Spotlight from "@/components/ui/spotlight"
+import FilterButtons from "@/components/ui/filter-buttons"
+import DoodleBackground from "@/components/ui/doodle-background"
+import PhotoStack from "@/components/ui/photo-stack"
 import { projects } from "./data/projects"
 import { experiences } from "./data/experience"
 
 export default function Home() {
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
+
+  const allItems = [
+    ...experiences.map(item => ({ ...item, category: 'work' })),
+    ...projects.map(item => ({ ...item, category: 'projects' }))
+  ];
+
+  const filteredItems = activeFilter === null
+    ? allItems 
+    : allItems.filter(item => item.category === activeFilter);
+
+  const handleFilterChange = (filter: string) => {
+    // Toggle: if clicking the same filter, deselect it (show all)
+    setActiveFilter(activeFilter === filter ? null : filter);
+    setOpenModalIndex(null); // Close modal when filter changes
+  };
+
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-black">
+    <div className="min-h-screen flex flex-col bg-black relative">
+      <DoodleBackground />
       <Spotlight />
-      <div>
-        <h1 className="title pt-16 mx-auto pb-4">IAN KOROVINSKY</h1>
-        <h2 className="title-subtext pt-8 mx-auto">
-        eng intern @ thrive capital
-          <br />
-          co-director @ hack the north
-          <br />
-          software engineering @ university of waterloo
-        </h2>
-        
-        <div className="flex gap-6 justify-center items-center mt-12 pb-8">
-          <a 
-            href="https://github.com/iankorovinsky" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:opacity-70 transition-opacity"
-            aria-label="GitHub Profile"
-          >
-            <Image src="/icons/github.svg" alt="Github" className="social-icon" width={30.508} height={30} />
-          </a>
-          <a 
-            href="https://linkedin.com/in/ian-korovinsky" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:opacity-70 transition-opacity"
-            aria-label="LinkedIn Profile"
-
-          >
-            <Image src="/icons/linkedin.svg" alt="Linkedin" width={30} height={30} />
-          </a>
-          <a 
-            href="https://x.com/ikorovinsky" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:opacity-70 transition-opacity"
-            aria-label="Twitter Profile"
-          >
-            <Image src="/icons/x.svg" alt="X" className="social-icon" width={33.189} height={30}/>
-          </a>
-          <a 
-            href="https://se-webring.xyz/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:opacity-70 transition-opacity flex items-center"
-            aria-label="SE Webring"
-          >
-            <Image src="/icons/se-webring.svg" alt="SE Webring" className="social-icon" width={30} height={30} />
-          </a>
+      
+      {/* Hero Section */}
+      <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pt-16 md:pt-20 pb-12 md:pb-16 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="max-w-3xl flex-1">
+            <h1 className="hero-title">
+              Ian Korovinsky
+            </h1>
+            <p className="hero-description">
+              software engineering @ university of waterloo.<br />co-director @ hack the north.<br />
+              i build products that solve problems, host events that bring interesting people together, and support builders at their earliest stages.<br />
+            </p>
+            
+            <div className="flex gap-6 items-center">
+              <a 
+                href="https://github.com/iankorovinsky" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+                aria-label="GitHub Profile"
+              >
+                <Image src="/icons/github.svg" alt="Github" className="social-icon" width={30.508} height={30} />
+              </a>
+              <a 
+                href="https://linkedin.com/in/ian-korovinsky" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+                aria-label="LinkedIn Profile"
+              >
+                <Image src="/icons/linkedin.svg" alt="Linkedin" width={30} height={30} />
+              </a>
+              <a 
+                href="https://x.com/ikorovinsky" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+                aria-label="Twitter Profile"
+              >
+                <Image src="/icons/x.svg" alt="X" className="social-icon" width={33.189} height={30}/>
+              </a>
+              <a 
+                href="https://se-webring.xyz/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity flex items-center"
+                aria-label="SE Webring"
+              >
+                <Image src="/icons/se-webring.svg" alt="SE Webring" className="social-icon" width={30} height={30} />
+              </a>
+            </div>
+          </div>
+          
+          <div className="flex-shrink-0">
+            <PhotoStack images={[]} />
+          </div>
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[95vw] mx-auto px-4 md:px-8 py-8 md:py-16">
-        {[...experiences, ...projects].map((item, index) => (
-          <ProjectCard 
-            key={index}
-            {...item}
-          />
-        ))}
-      </div>
-      <div className="text-sm font-[var(--font-secondary)] text-center pb-8 text-white flex flex-col gap-2">
+      </section>
+
+      {/* Cards Section */}
+      <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pb-12 md:pb-16">
+        <FilterButtons 
+          categories={['work', 'projects', 'writing']}
+          activeFilter={activeFilter}
+          setActiveFilter={handleFilterChange}
+        />
+        {activeFilter === 'writing' ? (
+          <div className="flex justify-center items-center py-16">
+            <p className="text-white text-lg font-light font-secondary">
+              coming soon...
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map((item, index) => (
+              <ProjectCard 
+                key={`${item.category}-${item.title}-${index}`}
+                {...item}
+                isOpen={openModalIndex === index}
+                onOpenChange={(open) => {
+                  if (open) {
+                    setOpenModalIndex(index)
+                  } else {
+                    setOpenModalIndex(null)
+                  }
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </section>
+      <div className="text-sm font-[var(--font-secondary)] text-center pb-8 text-white flex flex-col gap-2 relative z-10">
         <div>built with ❤️, 🪿, and 🧋 in waterloo</div>
         <div>
           inspired by{" "}

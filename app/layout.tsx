@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { GeistMono } from 'geist/font/mono';
-import localFont from 'next/font/local';
+import { Space_Grotesk } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import "./globals.css";
-import Navbar from "@/components/ui/navbar";
 import Spotlight from "@/components/ui/spotlight";
 
-const primary_font = GeistMono;
-const secondary_font = localFont({
-  src: '../public/fonts/Aeonik-Regular.otf',
-  variable: '--font-secondary'
+const primary_font = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-primary',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+const secondary_font = Inter({
+  subsets: ['latin'],
+  variable: '--font-secondary',
+  weight: ['200', '300', '400', '500', '600'],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +30,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${primary_font.variable} ${secondary_font.variable} antialiased`}>
         <Spotlight />
-        <Navbar />
         {children}
       </body>
     </html>
