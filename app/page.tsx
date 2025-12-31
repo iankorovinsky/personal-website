@@ -167,7 +167,7 @@ export default function Home() {
           >
             rajan agarwal
           </a>
-          {" "}and{" "}
+          {", "}
           <a
             href="https://ishaand.com"
             target="_blank"
@@ -175,6 +175,15 @@ export default function Home() {
             className="hover:opacity-70 transition-opacity underline"
           >
             ishaan dey
+          </a>
+          {", "}and{" "}
+          <a
+            href="https://elijahkurien.com"
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="hover:opacity-70 transition-opacity underline"
+          >
+            elijah kurien
           </a>
         </div>
       </div>
