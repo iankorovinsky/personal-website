@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/ui/project-card";
 import Spotlight from "@/components/ui/spotlight"
 import FilterButtons from "@/components/ui/filter-buttons"
-import DoodleBackground from "@/components/ui/doodle-background"
+import Video2Ascii from "video2ascii"
 import PhotoStack from "@/components/ui/photo-stack"
 import { projects } from "./data/projects"
 import { experiences } from "./data/experience"
@@ -13,6 +13,18 @@ import { experiences } from "./data/experience"
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
+  const [numColumns, setNumColumns] = useState(120);
+
+  useEffect(() => {
+    const updateColumns = () => {
+      // Calculate columns based on viewport width (roughly 1 column per 10-12px)
+      setNumColumns(Math.floor(window.innerWidth / 10));
+    };
+    
+    updateColumns();
+    window.addEventListener('resize', updateColumns);
+    return () => window.removeEventListener('resize', updateColumns);
+  }, []);
 
   const allItems = [
     ...experiences.map(item => ({ ...item, category: 'work' })),
@@ -31,9 +43,27 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen flex flex-col bg-black relative">
-      <DoodleBackground />
-      <Spotlight />
+    <div className="min-h-screen flex flex-col relative bg-black">
+      <div className="fixed top-0 left-0 w-screen h-screen z-0">
+        <div className="w-full h-full">
+          <Video2Ascii
+            src="/background.mp4"
+            numColumns={numColumns}
+            colored={true}
+            brightness={0.2}
+            audioEffect={0}
+            enableMouse={false}
+            enableRipple={false}
+            charset="minimal"
+            isPlaying={true}
+            autoPlay={true}
+            showStats={false}
+          />
+        </div>
+      </div>
+      {/* <div className="fixed top-0 left-0 w-screen h-screen pointer-events-none z-[1] opacity-90">
+        <Spotlight />
+      </div> */}
       
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pt-16 md:pt-20 pb-12 md:pb-16 relative z-10">
