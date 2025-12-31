@@ -19,6 +19,24 @@ const secondary_font = Inter({
 export const metadata: Metadata = {
   title: "Ian Korovinsky",
   description: "Dream it. Build it. Ship it.",
+  openGraph: {
+    title: "Ian Korovinsky",
+    description: "Dream it. Build it. Ship it.",
+    images: [
+      {
+        url: "/thumbnail.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ian Korovinsky",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ian Korovinsky",
+    description: "Dream it. Build it. Ship it.",
+    images: ["/thumbnail.jpg"], 
+  },
 };
 
 export default function RootLayout({
