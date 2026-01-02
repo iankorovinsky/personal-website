@@ -10,7 +10,7 @@ interface FilterButtonsProps {
 
 export default function FilterButtons({ categories, activeFilter, setActiveFilter }: FilterButtonsProps) {
   return (
-    <div className="flex gap-4 mb-8">
+    <div className="flex gap-4 mb-8 relative z-20">
       {categories.map((category) => (
         <Button
           key={category}

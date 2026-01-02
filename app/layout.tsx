@@ -17,6 +17,7 @@ const secondary_font = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://iankorovinsky.ca"),
   title: "Ian Korovinsky",
   description: "Dream it. Build it. Ship it.",
   openGraph: {

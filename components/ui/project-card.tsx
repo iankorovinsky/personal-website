@@ -71,7 +71,7 @@ export default function ProjectCard({
             />
           </div>
         </div>
-        <CardContent className="py-6 px-1">
+        <CardContent className="py-6 px-1 relative z-20">
           <div className="flex justify-between items-start mb-1">
             <h2 className="text-zinc-100 text-2xl font-medium tracking-tight uppercase font-primary relative inline-block">
               {title}
@@ -94,9 +94,16 @@ export default function ProjectCard({
           className="bg-zinc-900 text-white border-zinc-800 max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl pt-6"
         >
           <DialogHeader>
-            <DialogTitle className="text-3xl font-medium tracking-tight uppercase mb-2 font-primary">
-              {title}
-            </DialogTitle>
+            <div className="flex justify-between items-start">
+              <DialogTitle className="text-3xl font-medium tracking-tight uppercase mb-2 font-primary">
+                {title}
+              </DialogTitle>
+              {year && (
+                <span className="text-zinc-400 text-sm font-light font-secondary ml-4 flex-shrink-0">
+                  {year}
+                </span>
+              )}
+            </div>
             <DialogDescription className="text-zinc-400 text-lg font-light font-secondary">
               {subtitle}
             </DialogDescription>

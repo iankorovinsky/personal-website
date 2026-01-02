@@ -131,7 +131,7 @@ export default function Home() {
           setActiveFilter={handleFilterChange}
         />
         {activeFilter === 'writing' ? (
-          <div className="flex justify-center items-center py-16">
+          <div className="flex justify-center items-center py-16 relative z-20">
             <p className="text-white text-lg font-light font-secondary">
               coming soon...
             </p>
