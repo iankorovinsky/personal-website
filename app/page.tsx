@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/ui/project-card";
 import Spotlight from "@/components/ui/spotlight"
 import FilterButtons from "@/components/ui/filter-buttons"
-import Video2Ascii from "video2ascii"
+import AsciiBackground from "@/components/ui/ascii-background"
 import PhotoStack from "@/components/ui/photo-stack"
 import { projects } from "./data/projects"
 import { experiences } from "./data/experience"
@@ -13,18 +13,6 @@ import { experiences } from "./data/experience"
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
-  const [numColumns, setNumColumns] = useState(120);
-
-  useEffect(() => {
-    const updateColumns = () => {
-      // Calculate columns based on viewport width (roughly 1 column per 10-12px)
-      setNumColumns(Math.floor(window.innerWidth / 10));
-    };
-    
-    updateColumns();
-    window.addEventListener('resize', updateColumns);
-    return () => window.removeEventListener('resize', updateColumns);
-  }, []);
 
   const allItems = [
     ...experiences.map(item => ({ ...item, category: 'work' })),
@@ -44,30 +32,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col relative bg-black">
-      <div className="fixed top-0 left-0 w-screen h-screen z-0">
-        <div className="w-full h-full">
-          <Video2Ascii
-            src="/background.mp4"
-            numColumns={numColumns}
-            colored={true}
-            brightness={0.2}
-            audioEffect={0}
-            enableMouse={false}
-            enableRipple={false}
-            charset="minimal"
-            isPlaying={true}
-            autoPlay={true}
-            showStats={false}
-          />
-        </div>
-      </div>
+      <AsciiBackground />
       {/* <div className="fixed top-0 left-0 w-screen h-screen pointer-events-none z-[1] opacity-90">
         <Spotlight />
       </div> */}
       
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pt-16 md:pt-20 pb-12 md:pb-16 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-end">
           <div className="max-w-3xl flex-1">
             <h1 className="hero-title">
               Ian Korovinsky
@@ -117,8 +89,12 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="flex-shrink-0">
-            <PhotoStack images={[]} />
+          <div className="flex-shrink-0 flex-1 flex justify-center mt-8 lg:mt-0">
+            <PhotoStack images={[
+              "/photo-stack/performative-1.jpg",
+              "/photo-stack/performative-2.jpeg",
+              "/photo-stack/performative-3.jpeg"
+            ]} />
           </div>
         </div>
       </section>

@@ -90,56 +90,59 @@ export default function ProjectCard({
       </Card>
 
       <Dialog open={isModalOpen} onOpenChange={handleOpenChange}>
-        <DialogContent 
-          className="bg-zinc-900 text-white border-zinc-800 max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl pt-6"
+        <DialogContent
+          className="bg-gradient-to-b from-zinc-900 to-zinc-950 text-white border-none max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl p-8 shadow-2xl shadow-black/50 outline-none focus:outline-none"
         >
-          <DialogHeader>
-            <div className="flex justify-between items-start">
-              <DialogTitle className="text-3xl font-medium tracking-tight uppercase mb-2 font-primary">
+          <DialogHeader className="space-y-1">
+            <div className="flex justify-between items-center">
+              <DialogTitle className="text-3xl font-medium tracking-tight uppercase font-primary">
                 {title}
               </DialogTitle>
               {year && (
-                <span className="text-zinc-400 text-sm font-light font-secondary ml-4 flex-shrink-0">
+                <span className="text-zinc-500 text-sm font-light font-secondary px-3 py-1 bg-zinc-800/50 rounded-full">
                   {year}
                 </span>
               )}
             </div>
-            <DialogDescription className="text-zinc-400 text-lg font-light font-secondary">
+            <DialogDescription className="text-zinc-400 text-base font-light font-secondary">
               {subtitle}
             </DialogDescription>
           </DialogHeader>
-          <div className="aspect-[16/9] relative my-4">
+
+          <div className="aspect-[16/9] relative my-2 rounded-xl overflow-hidden ring-1 ring-zinc-700/50">
             <Image
               src={imageSrc}
               alt={title}
               fill
-              className="object-cover rounded-lg"
+              className="object-cover"
             />
           </div>
-          <p className="text-zinc-300 mb-4 font-secondary text-sm whitespace-pre-line">
+
+          <div className="text-zinc-300 mb-2 font-secondary text-sm leading-relaxed whitespace-pre-line">
             {body}
-          </p>
-          <Button 
+          </div>
+
+          <Button
             asChild
             variant="default"
-            className="font-primary flex justify-between items-center w-full bg-zinc-950 hover:bg-zinc-800 transition-colors rounded-[4px]"
+            className="font-primary flex justify-between items-center w-full bg-white text-black hover:bg-zinc-200 transition-all duration-300 rounded-lg py-6"
           >
-            <a 
+            <a
               href={url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-between items-center w-full"
             >
-              <span>{linkText.toUpperCase()}</span>
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
+              <span className="font-medium">{linkText.toUpperCase()}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
                 strokeLinejoin="round"
                 className="ml-2"
               >
