@@ -207,6 +207,9 @@ export default function AboutPage() {
                       alt={section.title}
                       fill
                       className="object-cover"
+                      sizes="180px"
+                      quality={75}
+                      loading={index < 2 ? "eager" : "lazy"}
                     />
                   </div>
                   <div className="h-[40px] bg-white"></div>
