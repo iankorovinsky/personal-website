@@ -110,3 +110,33 @@ body {
   );
   transition: all 0.5s ease;
 }
+
+.about-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.about-link:hover {
+  color: #a1a1aa;
+}
+
+/* Polaroid hover effects for about page */
+.polaroid-right {
+  transform: rotate(3deg);
+  transition: all 0.3s ease-out;
+}
+
+.polaroid-right:hover {
+  transform: rotate(-8deg) translateY(-10px);
+}
+
+.polaroid-left {
+  transform: rotate(-3deg);
+  transition: all 0.3s ease-out;
+}
+
+.polaroid-left:hover {
+  transform: rotate(8deg) translateY(-10px);
+}
