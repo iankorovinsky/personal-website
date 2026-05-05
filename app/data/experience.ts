@@ -1,92 +1,87 @@
 export const experiences = [
   {
     title: "Baseten",
-    subtitle: "post-training + rl",
+    subtitle: "post-training + rl for open-source models",
     imageSrc: "/images/work/baseten.jpg",
     url: "https://www.baseten.co",
     body: `working on post-training and reinforcement learning infrastructure to improve model quality and performance`,
     linkText: "website",
-    year: "2026",
+    year: "may 2026 - present",
     backlightColor: "rgba(74, 222, 128, 0.7)"
   },
   {
     title: "General Catalyst",
-    subtitle: "angel investing in builders",
+    subtitle: "angel investing and being a partner to founders",
     imageSrc: "/images/work/general-catalyst.png",
     url: "https://www.generalcatalyst.com",
     body: `angel investing in early-stage builders and startups, helping founders get their first checks and bring their ideas to life`,
     linkText: "website",
-    year: "2026",
+    year: "jan 2026 - present",
     backlightColor: "rgba(236, 72, 153, 0.7)"
   },
   {
     title: "Thrive Capital",
-    subtitle: "tooling for venture capital",
+    subtitle: "going 0 -> 1 on tooling for venture capital",
     imageSrc: "/images/thrive.jpg",
     url: "https://www.thrivecap.com",
     body: `interned at a venture capital firm as a software engineering intern, working on internal tooling that changes the way that people work`,
     linkText: "website",
-    year: "2025",
+    year: "sept 2025 - dec 2025",
     backlightColor: "rgba(239, 68, 68, 0.7)"
   },
   {
-    title: "Bloomberg",
-    subtitle: "ai & trading compliance",
+    title: "bloomberg",
+    subtitle: "fine-tuning text-classification models and building multi-agent recommendation pipelines",
     imageSrc: "/images/bloomberg.jpg",
     url: "https://www.bloomberg.com/professional/products/trading/order-management-system/aim/",
-    body: `interned twice as a software engineering intern on the buy-side compliance ai team for my first two co-ops at the university of waterloo\n\nco-op 1 (may - august 2024): designed a custom semantic search framework for internal usage, improved search on compliance tooling, and helped co-host a two-week conference for engineering teams\n\nco-op 2 (jan - april 2025): finetuned text classification models, designed solutions for recommendation pipelines, ran one of the first multi-agent experiments at bloomberg, and worked with a joint team to integrate the semantic search framework built during my first co-op as the underlying infrastructure of one of the largest internal ai tools`,
+    body: ``,
     linkText: "website",
-    year: "2024-2025",
-    backlightColor: "rgba(99, 102, 241, 0.7)"
+    year: "jan 2025 - april 2025",
+    backlightColor: "rgba(99, 102, 241, 0.7)",
+    displayType: "row"
   },
   {
-    title: "Hack The North",
-    subtitle: "canada's largest hackathon",
-    imageSrc: "/images/hack_the_north.png",
-    url: "https://www.hackthenorth.com",
-    body: `co-directing canada's largest hackathon, with over 1000 participants and 40+ sponsors (nov 2024 - present)\n\nformerly spearheaded 20+ workshops and 150+ mentors for hackers (march 2024 - october 2024)\n\nhackathon inquiries: ian [at] hackthenorth [dot] com`,
-    linkText: "website",
-    year: "2024-",
-    backlightColor: "rgba(245, 158, 11, 0.7)"
-  },
-  {
-    title: "Sibli",
-    subtitle: "financial data pipelines",
+    title: "sibli",
+    subtitle: "writing graph algorithms for parsing financial models and redesigning data parsing pipelines",
     imageSrc: "/images/sibli.webp",
     url: "https://sibli.ai/",
-    body: `interned twice at a fast-growing trading intelligence startup right out of high school\n\ninternship 1 (july - september 2023): built a custom data pipeline for aggregated company data\n\ninternship 2 (october - november 2024): rewrote and redesigned a financial data parsing service written in C# to python, and contributed to a few graph parsing algorithms for extracting relationships between financial models and their underlying data`,
+    body: `software engineering intern at a fast-growing trading intelligence startup\n\nrewrote and redesigned a financial data parsing service written in C# to python, and contributed to a few graph parsing algorithms for extracting relationships between financial models and their underlying data`,
     linkText: "website",
-    year: "2023-2024",
-    backlightColor: "rgba(20, 184, 166, 0.7)"
+    year: "oct 2024 - nov 2024",
+    backlightColor: "rgba(20, 184, 166, 0.7)",
+    displayType: "row"
   },
   {
-    title: "Ontario DECA Officer",
-    subtitle: "sponsorships, events & tech for competitions",
-    imageSrc: "/images/deca_po.png",
-    url: "https://www.deca.ca",
-    body: "raised $150K+ in sponsorships, organized events for 15,000+ students across ontario, and helped build the website & mobile app for the 2024 ontario deca season",
+    title: "bloomberg",
+    subtitle: "built a custom semantic search framework and co-hosted a two-week conference for engineering teams",
+    imageSrc: "/images/bloomberg.jpg",
+    url: "https://www.bloomberg.com/professional/products/trading/order-management-system/aim/",
+    body: `software engineering intern on the buy-side compliance ai team\n\ndesigned a custom semantic search framework for internal usage, improved search on compliance tooling, and helped co-host a two-week conference for engineering teams`,
     linkText: "website",
-    year: "2022-2023",
-    backlightColor: "rgba(219, 39, 119, 0.7)"
+    year: "may 2024 - aug 2024",
+    backlightColor: "rgba(99, 102, 241, 0.7)",
+    displayType: "row"
   },
   {
-    title: "Floato",
-    subtitle: "drone photography and videography",
+    title: "sibli",
+    subtitle: "developed etl data pipelines and web scrapers for company intelligence",
+    imageSrc: "/images/sibli.webp",
+    url: "https://sibli.ai/",
+    body: `software engineering intern at a fast-growing trading intelligence startup\n\nbuilt a custom data pipeline for aggregated company data`,
+    linkText: "website",
+    year: "jul 2023 - sep 2023",
+    backlightColor: "rgba(20, 184, 166, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "floato",
+    subtitle: "started a drone photography and videography business at 16 and made lunch money to buy subway",
     imageSrc: "/images/floato.jpg",
     url: "https://www.youtube.com/@floato6498",
     body: `started a business at 16, providing real estate photography and videography services\n\nsupported by a $3000 grant from the government of ontario`,
     linkText: "reels",
-    year: "2022-2023",
-    backlightColor: "rgba(147, 51, 234, 0.7)"
-  },
-  {
-    title: "UWaterloo YouthInn",
-    subtitle: "national advisory council",
-    imageSrc: "/images/youthinn.avif",
-    url: "https://uwaterloo.ca/youth-and-innovation/",
-    body: "serving since 2022 as a member of the uwaterloo youth and innovation project national advisory council, made up of fellow youth leaders and industry experts.\n\n co-authored a paper, advocated for more youth involvement in the modern workforce, and gave feedback on projects relating to youth entrepreneurship and innovation.",
-    linkText: "website",
-    year: "2022-",
-    backlightColor: "rgba(6, 182, 212, 0.7)"
+    year: "jun 2022 - aug 2023",
+    backlightColor: "rgba(147, 51, 234, 0.7)",
+    displayType: "row"
   }
 ] 

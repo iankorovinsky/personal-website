@@ -3,20 +3,22 @@
 import { useState } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/ui/project-card";
+import ExperienceRow from "@/components/ui/experience-row";
 import Spotlight from "@/components/ui/spotlight"
 import FilterButtons from "@/components/ui/filter-buttons"
 import AsciiBackground from "@/components/ui/ascii-background"
 import PhotoStack from "@/components/ui/photo-stack"
 import { projects } from "./data/projects"
 import { experiences } from "./data/experience"
+import { community } from "./data/community"
 
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>('work');
-  const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
 
   const allItems = [
     ...experiences.map(item => ({ ...item, category: 'work' })),
-    ...projects.map(item => ({ ...item, category: 'projects' }))
+    ...projects.map(item => ({ ...item, category: 'projects' })),
+    ...community.map(item => ({ ...item, category: 'community' }))
   ];
 
   const filteredItems = activeFilter === null
@@ -26,7 +28,6 @@ export default function Home() {
   const handleFilterChange = (filter: string) => {
     // Toggle: if clicking the same filter, deselect it (show all)
     setActiveFilter(activeFilter === filter ? null : filter);
-    setOpenModalIndex(null); // Close modal when filter changes
   };
 
 
@@ -46,10 +47,40 @@ export default function Home() {
             </h1>
             <p className="hero-description">
               <span className="block">model training @ baseten</span>
-              <span className="block pl-4">scout @ general catalyst</span>
-              <span className="block pl-8">co-director @ hack the north</span>
-              <span className="block pl-12">software engineering @ university of waterloo</span>
-              <span className="block mt-2">i build products that solve problems, host events that bring interesting people together, and support builders at their earliest stages.</span>
+              <span className="block">software engineering @ university of waterloo</span>
+              <span className="block mt-2">
+                i{" "}
+                <a 
+                  href="https://www.baseten.co" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity relative inline-block group/link"
+                >
+                  build products that solve problems
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-600 transition-all duration-500 ease-out group-hover/link:bg-white"></span>
+                </a>
+                , {" "}
+                <a 
+                  href="https://www.hackthenorth.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity relative inline-block group/link"
+                >
+                  host events that bring interesting people together
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-600 transition-all duration-500 ease-out group-hover/link:bg-white"></span>
+                </a>
+                , and {" "}
+                <a 
+                  href="https://www.generalcatalyst.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition-opacity relative inline-block group/link"
+                >
+                  support builders at their earliest stages
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-600 transition-all duration-500 ease-out group-hover/link:bg-white"></span>
+                </a>
+                .
+              </span>
             </p>
             
             <div className="flex gap-6 items-center">
@@ -103,9 +134,9 @@ export default function Home() {
       </section>
 
       {/* Cards Section */}
-      <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pb-12 md:pb-16">
+      <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pb-12 md:pb-16 relative z-10">
         <FilterButtons 
-          categories={['work', 'projects', 'writing']}
+          categories={['work', 'projects', 'community', 'writing']}
           activeFilter={activeFilter}
           setActiveFilter={handleFilterChange}
         />
@@ -116,21 +147,35 @@ export default function Home() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item, index) => (
-              <ProjectCard 
-                key={`${item.category}-${item.title}-${index}`}
-                {...item}
-                isOpen={openModalIndex === index}
-                onOpenChange={(open) => {
-                  if (open) {
-                    setOpenModalIndex(index)
-                  } else {
-                    setOpenModalIndex(null)
-                  }
-                }}
-              />
-            ))}
+          <div className="space-y-12">
+            {/* Card items */}
+            {filteredItems.filter((item: any) => item.displayType !== 'row').length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredItems
+                  .filter((item: any) => item.displayType !== 'row')
+                  .map((item, index) => (
+                    <ProjectCard 
+                      key={`card-${item.category}-${item.title}-${index}`}
+                      {...item}
+                    />
+                  ))}
+              </div>
+            )}
+            
+            {/* Row items */}
+            {filteredItems.filter((item: any) => item.displayType === 'row').length > 0 && (
+              <div>
+                {filteredItems
+                  .filter((item: any) => item.displayType === 'row')
+                  .map((item, index, array) => (
+                    <ExperienceRow 
+                      key={`row-${item.category}-${item.title}-${index}`}
+                      {...item}
+                      isLast={index === array.length - 1}
+                    />
+                  ))}
+              </div>
+            )}
           </div>
         )}
       </section>
