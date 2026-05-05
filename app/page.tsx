@@ -45,7 +45,7 @@ export default function Home() {
               Ian Korovinsky
             </h1>
             <p className="hero-description">
-              <span className="block">engineering @ baseten</span>
+              <span className="block">model training @ baseten</span>
               <span className="block pl-4">scout @ general catalyst</span>
               <span className="block pl-8">co-director @ hack the north</span>
               <span className="block pl-12">software engineering @ university of waterloo</span>
