@@ -147,7 +147,7 @@ export default function Home() {
             </p>
           </div>
         ) : (
-          <div className="space-y-12">
+          <div className="">
             {/* Card items */}
             {filteredItems.filter((item: any) => item.displayType !== 'row').length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
