@@ -11,7 +11,7 @@ import { projects } from "./data/projects"
 import { experiences } from "./data/experience"
 
 export default function Home() {
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string | null>('work');
   const [openModalIndex, setOpenModalIndex] = useState<number | null>(null);
 
   const allItems = [
@@ -45,8 +45,11 @@ export default function Home() {
               Ian Korovinsky
             </h1>
             <p className="hero-description">
-              software engineering @ university of waterloo.<br />co-director @ hack the north.<br />
-              i build products that solve problems, host events that bring interesting people together, and support builders at their earliest stages.<br />
+              <span className="block">engineering @ baseten</span>
+              <span className="block pl-4">scout @ general catalyst</span>
+              <span className="block pl-8">co-director @ hack the north</span>
+              <span className="block pl-12">software engineering @ university of waterloo</span>
+              <span className="block mt-2">i build products that solve problems, host events that bring interesting people together, and support builders at their earliest stages.</span>
             </p>
             
             <div className="flex gap-6 items-center">

@@ -48,7 +48,7 @@ export default function PhotoStack({ images }: PhotoStackProps) {
           return (
             <div
               key={index}
-              className="absolute inset-0 transition-all duration-500 ease-out"
+              className="absolute inset-0 transition-transform duration-500 ease-out"
               style={{
                 transform: `translate(${x}px, ${y}px) rotate(${rotate}deg)`,
                 zIndex: getZIndex(index),
