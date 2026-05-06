@@ -46,7 +46,7 @@ export default function Home() {
               Ian Korovinsky
             </h1>
             <p className="hero-description">
-              <span className="block">model training @ baseten</span>
+              <span className="block">post-training @ baseten</span>
               <span className="block">software engineering @ university of waterloo</span>
               <span className="block mt-2">
                 i{" "}
@@ -54,30 +54,27 @@ export default function Home() {
                   href="https://www.baseten.co" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity relative inline-block group/link"
+                  className="underline decoration-1 underline-offset-2 hover:opacity-70 transition-opacity"
                 >
                   build products that solve problems
-                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-600 transition-all duration-500 ease-out group-hover/link:bg-white"></span>
                 </a>
                 , {" "}
                 <a 
                   href="https://www.hackthenorth.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity relative inline-block group/link"
+                  className="underline decoration-1 underline-offset-2 hover:opacity-70 transition-opacity"
                 >
                   host events that bring interesting people together
-                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-600 transition-all duration-500 ease-out group-hover/link:bg-white"></span>
                 </a>
                 , and {" "}
                 <a 
                   href="https://www.generalcatalyst.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:opacity-70 transition-opacity relative inline-block group/link"
+                  className="underline decoration-1 underline-offset-2 hover:opacity-70 transition-opacity"
                 >
                   support builders at their earliest stages
-                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-zinc-600 transition-all duration-500 ease-out group-hover/link:bg-white"></span>
                 </a>
                 .
               </span>
@@ -125,9 +122,9 @@ export default function Home() {
           
           <div className="flex-shrink-0 flex-1 flex justify-center mt-8 lg:mt-0">
             <PhotoStack images={[
-              "/photo-stack/performative-1.jpg",
-              "/photo-stack/performative-2.jpeg",
-              "/photo-stack/performative-3.jpeg"
+              "/photo-stack/performative-1.webp",
+              "/photo-stack/performative-2.webp",
+              "/photo-stack/performative-3.webp"
             ]} />
           </div>
         </div>
@@ -136,7 +133,7 @@ export default function Home() {
       {/* Cards Section */}
       <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pb-12 md:pb-16 relative z-10">
         <FilterButtons 
-          categories={['work', 'projects', 'community', 'writing']}
+          categories={['work', 'projects', 'community']}
           activeFilter={activeFilter}
           setActiveFilter={handleFilterChange}
         />

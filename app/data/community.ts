@@ -2,7 +2,7 @@ export const community = [
   {
     title: "Hack The North",
     subtitle: "canada's largest hackathon",
-    imageSrc: "/images/hack_the_north.png",
+    imageSrc: "/images/hack_the_north.webp",
     url: "https://www.hackthenorth.com",
     body: `co-directing canada's largest hackathon, with over 1000 participants and 40+ sponsors (nov 2024 - present)\n\nformerly spearheaded 20+ workshops and 150+ mentors for hackers (march 2024 - october 2024)\n\nhackathon inquiries: ian [at] hackthenorth [dot] com`,
     linkText: "website",
@@ -12,7 +12,7 @@ export const community = [
   {
     title: "Ontario DECA Officer",
     subtitle: "sponsorships, events & tech for competitions",
-    imageSrc: "/images/deca_po.png",
+    imageSrc: "/images/deca_po.webp",
     url: "https://www.deca.ca",
     body: "raised $150K+ in sponsorships, organized events for 15,000+ students across ontario, and helped build the website & mobile app for the 2024 ontario deca season",
     linkText: "website",

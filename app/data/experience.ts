@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: "Baseten",
     subtitle: "post-training + rl for open-source models",
-    imageSrc: "/images/work/baseten.jpg",
+    imageSrc: "/images/work/baseten.webp",
     url: "https://www.baseten.co",
     body: `working on post-training and reinforcement learning infrastructure to improve model quality and performance`,
     linkText: "website",
@@ -12,7 +12,7 @@ export const experiences = [
   {
     title: "General Catalyst",
     subtitle: "angel investing and being a partner to founders",
-    imageSrc: "/images/work/general-catalyst.png",
+    imageSrc: "/images/work/general-catalyst.webp",
     url: "https://www.generalcatalyst.com",
     body: `angel investing in early-stage builders and startups, helping founders get their first checks and bring their ideas to life`,
     linkText: "website",
@@ -22,7 +22,7 @@ export const experiences = [
   {
     title: "Thrive Capital",
     subtitle: "going 0 -> 1 on tooling for venture capital",
-    imageSrc: "/images/thrive.jpg",
+    imageSrc: "/images/thrive.webp",
     url: "https://www.thrivecap.com",
     body: `interned at a venture capital firm as a software engineering intern, working on internal tooling that changes the way that people work`,
     linkText: "website",
@@ -32,7 +32,7 @@ export const experiences = [
   {
     title: "bloomberg",
     subtitle: "fine-tuning text-classification models and building multi-agent recommendation pipelines",
-    imageSrc: "/images/bloomberg.jpg",
+    imageSrc: "/images/bloomberg.webp",
     url: "https://www.bloomberg.com/professional/products/trading/order-management-system/aim/",
     body: ``,
     linkText: "website",
@@ -54,7 +54,7 @@ export const experiences = [
   {
     title: "bloomberg",
     subtitle: "built a custom semantic search framework and co-hosted a two-week conference for engineering teams",
-    imageSrc: "/images/bloomberg.jpg",
+    imageSrc: "/images/bloomberg.webp",
     url: "https://www.bloomberg.com/professional/products/trading/order-management-system/aim/",
     body: `software engineering intern on the buy-side compliance ai team\n\ndesigned a custom semantic search framework for internal usage, improved search on compliance tooling, and helped co-host a two-week conference for engineering teams`,
     linkText: "website",
@@ -76,7 +76,7 @@ export const experiences = [
   {
     title: "floato",
     subtitle: "started a drone photography and videography business at 16 and made lunch money to buy subway",
-    imageSrc: "/images/floato.jpg",
+    imageSrc: "/images/floato.webp",
     url: "https://www.youtube.com/@floato6498",
     body: `started a business at 16, providing real estate photography and videography services\n\nsupported by a $3000 grant from the government of ontario`,
     linkText: "reels",

@@ -16,7 +16,7 @@ const sections: Section[] = [
     content: `i was born in toronto, canada on may 27, 2005. i grew up in the suburbs of toronto, in a town called richmond hill.
     
     growing up, i tried a few different sports. i played hockey when i was in preschool, tried both karate and taekwondo, learned to swim long distances, and eventually stuck with tennis when i was 9.`,
-    image: "/about/early-days.jpg",
+    image: "/about/early-days.webp",
   },
   {
     title: "middle school",
@@ -25,7 +25,7 @@ const sections: Section[] = [
     i joined our school's <a href="https://www.vexrobotics.com/iq" target="_blank" rel="noopener noreferrer" class="about-link">vex robotics</a> club in grade 5 and built robots that played games. our team never did well at competitions, but we won an award for our science project on windmills and energy generation.
     
     in grade 8, i joined the yearbook club with two close friends, and after spending countless hours aligning class photos for the entire school, i learned what <a href="https://www.jostens.com/yearbooks/advisers-and-staff/technology-and-experience/" target="_blank" rel="noopener noreferrer" class="about-link">bad software</a> looks like.`,
-    image: "/about/vex-iq.jpeg",
+    image: "/about/vex-iq.webp",
   },
   {
     title: "judo",
@@ -36,7 +36,7 @@ const sections: Section[] = [
     1. respect those around you - your parents, you siblings, your teachers, and your friends.
     2. never give up - no matter how hard something is, and even if you're the last one to finish it, see it through.
     3. always know what direction you are going - that summer, we were hiking in the woods, and when my sensei asked me which way was north, i had no idea. if we were lost, we would have been absolutely cooked. since then, i've always maintained a sense of direction, and honestly it ended up saving me a few times.`,
-    image: "/about/judo.jpeg",
+    image: "/about/judo.webp",
   },
 
   {
@@ -50,14 +50,14 @@ const sections: Section[] = [
      after that, i joined <a href="https://www.instagram.com/racetoacure/?hl=en" target="_blank" rel="noopener noreferrer" class="about-link">race to a cure</a>, where i raised $1500 for a grant program to help fund stem projects high school students were building.
      
      finally, i led a team at <a href="https://www.instagram.com/upliftontario/?hl=en" target="_blank" rel="noopener noreferrer" class="about-link">uplift ontario</a>, where we created care packages for the homeless community in toronto and collected grocery donations for those in need.`,
-    image: "/about/volunteering.jpg",
+    image: "/about/volunteering.webp",
   },
   {
     title: "opportunify",
     content: `when i was 16, i wanted to help students find opportunities that would help them grow (i wished this existed for myself too!), so i started a non-profit called <a href="https://opportunifycanada.ca/" target="_blank" rel="noopener noreferrer" class="about-link">opportunify</a> with one of my best friends. we promoted work, volunteer, and school opportunities to over 4,000 youth, and hosted a case competition for youth across canada.
     
     eventually, i realized that i wanted to focus on other projects, so i stepped down as the president after two years, but the organization is still around today, helping students discover opportunities.`,
-    image: "/about/opportunify.jpg",
+    image: "/about/opportunify.webp",
   },
   {
     title: "floato",
@@ -66,7 +66,7 @@ const sections: Section[] = [
     initially, i wanted to focus on drone photography and videography for real estate, but it was difficult to find clients in this niche, since it turns out that this didn't solve any particular problem or serve any particular need realtors had. after a few months of trying to break into this market, i pivoted to drone rooftop inspections and that turned out to be much more profitable.
     
     after running the business for about a year, i decided to sunset it, but i still take on a few projects here and there, and bring my drone with me whenever i travel.`,
-    image: "/about/floato.jpg",
+    image: "/about/floato.webp",
   },
   {
     title: "deca",
@@ -75,7 +75,7 @@ const sections: Section[] = [
     after that, i was hooked. i led our school's business club for a year, and then became one of 8 ontario deca provincial officers. i worked nights and weekends to organize events for 15,000+ students across ontario, spending more time on deca than i did on everything else combined. in the end, i raised over $150,000 in sponsorships, and helped maintain the website and mobile app for the 2022-2023 season.
     
     genuinely, this was one of the best years of my life. i learned so many random skills by just taking on initiative wherever i could, and worked with some of the most passionate and driven people i've ever met. if i could go back in time and relive any year in my life, it would be this one. <3`,
-    image: "/about/deca.jpg",
+    image: "/about/deca.webp",
   },
   {
     title: "hackathons (pt. 1)",
@@ -84,14 +84,14 @@ const sections: Section[] = [
     in grade 12, i went to my first in-person hackathon (<a href="https://www.hackthenorth.com/" target="_blank" rel="noopener noreferrer" class="about-link">hack the north 2022</a>) and built a gesture-controlled drone that puts out fires. i found it so crazy that i could not only come up with ideas, but also build them in the span of a weekend.
 
     that weekend, and that event, was the reason i decided to go into tech. after hack the north, i decided to apply to tech programs in addition to the business/economics ones i initially thought i wanted to do.`,
-    image: "/about/hackathons-pt-1.jpg",
+    image: "/about/hackathons-pt-1.webp",
   },
   {
     title: "university applications",
     content: `i ended up applying to 20+ schools in both canada and the us, and was awarded $435,000+ in scholarships, including the schulich leader @ mcgill, national president's scholarship @ western, and national math scholarship @ uwaterloo.
 
     i spent two months choosing between <a href="https://met.berkeley.edu/" target="_blank" rel="noopener noreferrer" class="about-link">berkeley met</a>, nyu stern, and uwaterloo cs/se - i ended up matriculating to uwaterloo software engineering, because i liked the people here the most! initially i felt a lot of fomo for giving up an opportunity like berkeley met, but a few years down the line, i'm glad i made that decision :)`,
-    image: "/about/university-deliberations.jpg",
+    image: "/about/university-deliberations.webp",
   },
   {
     title: "hackathons (pt. 2)",
@@ -102,7 +102,7 @@ const sections: Section[] = [
     this was my way of learning tech - i was bored of the classroom, and wanted to learn how to build products rather than standard textbook cs knowledge.
     
     my favourite hackathon (with absolutely no bias at all) was hack the north 2023, where my friends and i built <a href="https://devpost.com/software/dejavu" target="_blank" rel="noopener noreferrer" class="about-link">an ai wearable for your memories</a>. i ended up working on that project for the next four months, joined a local incubator, and <a href="https://www.youtube.com/watch?v=Vmupugz2M1s" target="_blank" rel="noopener noreferrer" class="about-link">presented it at the socratica symposium</a> that december.`,
-    image: "/about/hackathons-pt-2.png",
+    image: "/about/hackathons-pt-2.webp",
   },
   {
     title: "university clubs",
@@ -111,7 +111,7 @@ const sections: Section[] = [
     we hosted workshops, ran ctf practice sessions, and helped folks learn about cybersecurity. but to be honest, i was stumbling around most of the time, trying to figure out what i was doing, since i knew little about cybersecurity, and even less about how clubs were run at a university.
     
     in my second semester, i joined <a href="https://www.waterlooblockchain.ca/" target="_blank" rel="noopener noreferrer" class="about-link">waterloo blockchain</a> as the director of events. i hosted a ton of fun workshops with pizza and activations with boba, planned a blockchain and beer night even though i wasn't of legal drinking age (i don't drink, so i don't know much about alcohol), and helped organize a hacker house at ethdenver 2024. honestly a super fun experience (since i wanted to learn about blockchain as a whole), and felt like a new domain of tech just unlocked in front of me.`,
-    image: "/about/clubs.jpg",
+    image: "/about/clubs.webp",
   },
   {
     title: "hack the north",
@@ -120,7 +120,7 @@ const sections: Section[] = [
     when i started second year at uwaterloo, we hosted hack the north in september - best weekend of the semester by far. it got me thinking a lot about what i like about hackathons, and what i could do to make them better. hopefully i can write a blog post on this one day, but i fear i have so much to say that it'll impact the p99 of this website.
 
     i've co-directed hack the north since november 2024, organized the inaugural <a href="https://waterlootechweek.ca/" target="_blank" rel="noopener noreferrer" class="about-link">waterloo tech week</a>, and sidequested by hosting <a href="https://waterlootreasurehunt.ca/" target="_blank" rel="noopener noreferrer" class="about-link">the waterloo treasure hunt</a>.`,
-    image: "/about/hack-the-north.jpg",
+    image: "/about/hack-the-north.webp",
   },
   
   {
@@ -134,7 +134,7 @@ const sections: Section[] = [
     after that, i went back for my second co-op to bloomberg. i worked on a text classification model for the buy-side compliance ai team, and built out one of the first multi-agent projects at bloomberg. i also implemented some feature requests for the framework i created during my first co-op, since it was now used in one of the largest ai tools at bloomberg - an ai-powered code test generator.
 
     for my third co-op, i joined <a href="https://thrivecap.com/" target="_blank" rel="noopener noreferrer" class="about-link">thrive capital</a> as a product and engineering intern, working on an internaloperating system that changes the way that people work. i broke prod quite a few times, but it was a super fun experience because i learned a lot about how to build product from talented people. most importantly of all, i learned what good culture looks like, and met a lot of folks i now look up to. when i start my own company one day, i want to build a culture like theirs.`,
-    image: "/about/internships.jpeg",
+    image: "/about/internships.webp",
   },
 
   {
@@ -151,7 +151,7 @@ const sections: Section[] = [
 
     and most importantly of all, i'm thankful to be surrounded by people that challenge me to be a better version of myself, every single day.
     `,
-    image: "/about/modern-day.jpg",
+    image: "/about/modern-day.webp",
   },
 ]
 

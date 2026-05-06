@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "Dream it. Build it. Ship it.",
     images: [
       {
-        url: "/thumbnail.jpeg",
+        url: "/thumbnail.webp",
         width: 1200,
         height: 630,
         alt: "Ian Korovinsky",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ian Korovinsky",
     description: "Dream it. Build it. Ship it.",
-    images: ["/thumbnail.jpeg"], 
+    images: ["/thumbnail.webp"], 
   },
 };
 
