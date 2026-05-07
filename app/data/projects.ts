@@ -1,5 +1,27 @@
 export const projects = [
   {
+    title: "crowdfund",
+    subtitle: "crypto trading w/ ai agents",
+    imageSrc: "/images/crowdfund.webp",
+    url: "https://github.com/iankorovinsky/crowdfund",
+    body: `created a decentralized crypto trading platform that uses ai agents to automate trading workflows, allowing agents to analyze markets, execute trades, and earn through customizable strategies. supports agent creation with IP protection via story protocol, enabling users to utilize other people's agents, and for developers to receive royalties when their agents are used.\n\nawarded second place (story protocol track, $1500 usd) and best domain name at tartanhacks 2025`,
+    linkText: "github",
+    year: "2025",
+    backlightColor: "rgba(251, 146, 60, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "blocks",
+    subtitle: "smart contract compiler for starknet (cairo language)",
+    imageSrc: "/images/blocks.webp",
+    url: "https://dorahacks.io/buidl/20342",
+    body: `built a block-based smart contract builder for starknet's proprietary language cairo\n\nawarded second place overall, best developer tool, and best use of starknet (2nd place, $2000 usd) @ hack western 11, and deployed the public MVP at the starknet hacker house at ethdenver 2025`,
+    linkText: "official project",
+    year: "2024-2025",
+    backlightColor: "rgba(34, 197, 94, 0.7)",
+    displayType: "row"
+  },
+  {
     title: "Axiom",
     subtitle: "custom ide for formal proofs",
     imageSrc: "/images/axiom.webp",
@@ -10,36 +32,80 @@ export const projects = [
     backlightColor: "rgba(168, 85, 247, 0.7)"
   },
   {
+    title: "lacs",
+    subtitle: "mini-compiler written in scala",
+    imageSrc: "/images/lacs.webp",
+    url: "https://github.com/iankorovinsky/lacs",
+    body: `built a functional compiler from scratch in scala, implementing lexical analysis, parsing, semantic analysis, and code generation\n\nsupports variable declarations, control flow, and basic operations`,
+    linkText: "github",
+    year: "2024",
+    backlightColor: "rgba(248, 113, 113, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "climax",
+    subtitle: "predicting carbon emissions for progressive climate policy generation",
+    imageSrc: "/images/climax.webp",
+    url: "https://github.com/iankorovinsky/climax",
+    body: `developed a machine learning system to predict carbon emissions and generate data-driven climate policy recommendations\n\nbuilt models to forecast emission trends and identify key policy intervention points`,
+    linkText: "github",
+    year: "2024",
+    backlightColor: "rgba(34, 197, 94, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "eyeremember",
+    subtitle: "museum of memories for your apple vision pro (built on visionOS sdk launch weekend)",
+    imageSrc: "/images/eyeremember.webp",
+    url: "https://devpost.com/software/eyetunes-29oe6q",
+    body: `built a vr gallery that transforms memories and collectibles into immersive 3d experiences on apple vision pro\n\ncreated during visionos sdk release weekend using swift and the visionos sdk. users navigate through memories using gaze control, reliving moments in a virtual museum world\n\nawarded best .tech domain name at qhacks 2024`,
+    linkText: "devpost",
+    year: "2024",
+    backlightColor: "rgba(147, 51, 234, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "nostalg.ai",
+    subtitle: "polaroid camera + searchable memories",
+    imageSrc: "/images/nostalgai.webp",
+    url: "https://devpost.com/software/nostalg-ai",
+    body: `created a platform for effortlessly searching and preserving memories using text or images\n\nleverages cohere embeddings for semantic search through tagged photos and videos, gpt-4 vision for image understanding, and verbwire for minting memories as nfts on starknet. includes chat with rag to have dynamic conversations with your past\n\nbuilt at uofthacks 11`,
+    linkText: "devpost",
+    year: "2024",
+    backlightColor: "rgba(251, 146, 60, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "spaCey",
+    subtitle: "space bounties meet flow blockchain",
+    imageSrc: "/images/spacey.webp",
+    url: "https://devpost.com/software/spacey-9f3mga",
+    body: `built a platform democratizing space exploration by combining gesture-controlled mars rovers with a dao for submitting and claiming bounties\n\nusers earn flow tokens for completing space-related tasks like satellite refueling and colony construction. integrated tensorflow for gesture control neural network and esp32 for rover control\n\nawarded best use of flow and best use of starknet at utra hacks`,
+    linkText: "devpost",
+    year: "2024",
+    backlightColor: "rgba(59, 130, 246, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "teddy.ai",
+    subtitle: "talking teddy bear",
+    imageSrc: "/images/teddyai.webp",
+    url: "https://devpost.com/software/teddy-ai",
+    body: `created an ai-powered companion teddy bear that empowers children with blockchain concepts through nfts and flow tokens\n\nintegrated verbwire api for minting nft memories in real-time, flow blockchain for speech-based transactions, openai llms for natural conversation, and opencv for capturing moments. leveraged starknet mainnet to mint unique teddy bear nfts\n\naddressing the fact that over 45% of children feel lonely often or some of the time. awarded best use of flow (mlh) at deltahacks x`,
+    linkText: "devpost",
+    year: "2024",
+    backlightColor: "rgba(236, 72, 153, 0.7)",
+    displayType: "row"
+  },
+  {
     title: "Portal",
     subtitle: "semantic search for memories",
     imageSrc: "/images/portal.webp",
     url: "https://www.youtube.com/watch?v=Vmupugz2M1s",
     body: `created an ai-powered wearable device for semantic search on memories, and experimented with emulating human consciousness\n\nwon finalist at hack the north 2023 and continued to work on the project during buildspace n&w s5 in summer 2024. supported by eigenspace and the velocity cornerstone program`,
     linkText: "live demo",
-    year: "2023",
+    year: "2023-2024",
     backlightColor: "rgba(236, 72, 153, 0.7)"
-  },
-  {
-    title: "blocks",
-    subtitle: "smart contract compiler for starknet",
-    imageSrc: "/images/blocks.webp",
-    url: "https://dorahacks.io/buidl/20342",
-    body: `built a block-based smart contract builder for starknet's proprietary language cairo\n\nawarded second place overall, best developer tool, and best use of starknet (2nd place, $2000 usd) @ hack western 11, and deployed the public MVP at the starknet hacker house at ethdenver 2025`,
-    linkText: "official project",
-    year: "2025",
-    backlightColor: "rgba(34, 197, 94, 0.7)",
-    displayType: "row"
-  },
-  {
-    title: "crowdfund",
-    subtitle: "crypto trading w/ ai agents",
-    imageSrc: "/images/crowdfund.webp",
-    url: "https://github.com/iankorovinsky/crowdfund",
-    body: `created a decentralized crypto trading platform that uses ai agents to automate trading workflows, allowing agents to analyze markets, execute trades, and earn through customizable strategies. supports agent creation with IP protection via story protocol, enabling users to utilize other people's agents, and for developers to receive royalties when their agents are used.\n\nawarded second place (story protocol track, $1500 usd) and best domain name at tartanhacks 2025`,
-    linkText: "github",
-    year: "2025",
-    backlightColor: "rgba(251, 146, 60, 0.7)",
-    displayType: "row"
   },
   {
     title: "boat",
