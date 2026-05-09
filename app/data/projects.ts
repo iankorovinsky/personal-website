@@ -1,7 +1,62 @@
 export const projects = [
   {
+    title: "been there",
+    subtitle: "world-exploration game for your side-quests and your memories",
+    imageSrc: "/images/beenthere.webp",
+    url: "https://github.com/SuperZooper3/been-there",
+    body: ``,
+    linkText: "github",
+    year: "2026",
+    backlightColor: "rgba(244, 63, 94, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "rolodex",
+    subtitle: "ai-driven crm for keeping track of the people you meet",
+    imageSrc: "/images/rolodex.webp",
+    url: "https://github.com/iankorovinsky/rolodex",
+    body: ``,
+    linkText: "github",
+    year: "2026",
+    backlightColor: "rgba(99, 102, 241, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "cursor on the go",
+    subtitle: "a mobile connection to your laptop instance of cursor",
+    imageSrc: "/images/cursoronthego.webp",
+    url: "https://devpost.com/software/goon-cursor",
+    body: `created a mobile app that connects remotely to your cursor instance, allowing you to send prompts and watch responses in real time from anywhere. built with an injectable javascript payload that hooks into the cursor dom, establishing websocket connections to relay messages between mobile frontend and cursor\n\nincludes real-time notifications when prompts complete, auth0 authentication, and stripe payment integration. built at hackutd 2025`,
+    linkText: "devpost",
+    year: "2025",
+    backlightColor: "rgba(168, 85, 247, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "waterloo treasure hunt",
+    subtitle: "irl geocaching game w/ cash prizes",
+    imageSrc: "/images/waterlootreasurehunt.webp",
+    url: "https://waterlootreasurehunt.ca/",
+    body: `built an immersive geocaching experience across waterloo with hidden caches and secret keys scattered throughout the city. players competed to find physical caches using cryptic clues inspired by an explorer's lost diary, logging their finds online to track progress\n\nfeatured prizes for top finishers, first finders, and all participants. powered by zircuit with integrated authentication and payment processing`,
+    linkText: "website",
+    year: "2025",
+    backlightColor: "rgba(34, 197, 94, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "waterloo tech week",
+    subtitle: "a decentralized week of community events in waterloo",
+    imageSrc: "/images/waterlootechweek.webp",
+    url: "https://waterlootechweek.ca/",
+    body: `organized a week-long celebration of waterloo's tech community bringing together builders, founders, and innovators. featured independently hosted talks, demo nights, panels, workshops, and meetups across the city\n\ncreated to showcase what makes waterloo a global leader in technology and entrepreneurship, connecting people with ideas and values that define the community`,
+    linkText: "website",
+    year: "2025",
+    backlightColor: "rgba(59, 130, 246, 0.7)",
+    displayType: "row"
+  },
+  {
     title: "crowdfund",
-    subtitle: "crypto trading w/ ai agents",
+    subtitle: "crypto hedge fund managed by ai agents",
     imageSrc: "/images/crowdfund.webp",
     url: "https://github.com/iankorovinsky/crowdfund",
     body: `created a decentralized crypto trading platform that uses ai agents to automate trading workflows, allowing agents to analyze markets, execute trades, and earn through customizable strategies. supports agent creation with IP protection via story protocol, enabling users to utilize other people's agents, and for developers to receive royalties when their agents are used.\n\nawarded second place (story protocol track, $1500 usd) and best domain name at tartanhacks 2025`,
@@ -43,10 +98,10 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "climax",
+    title: "sage",
     subtitle: "predicting carbon emissions for progressive climate policy generation",
     imageSrc: "/images/climax.webp",
-    url: "https://github.com/iankorovinsky/climax",
+    url: "https://devpost.com/software/sage-5x6ed2",
     body: `developed a machine learning system to predict carbon emissions and generate data-driven climate policy recommendations\n\nbuilt models to forecast emission trends and identify key policy intervention points`,
     linkText: "github",
     year: "2024",
@@ -149,6 +204,17 @@ export const projects = [
     linkText: "website",
     year: "2023",
     backlightColor: "rgba(52, 211, 153, 0.7)",
+    displayType: "row"
+  },
+  {
+    title: "spleef.ai",
+    subtitle: "ai for real-time interview prep",
+    imageSrc: "/images/spleef.webp",
+    url: "https://devpost.com/software/spleef-ai",
+    body: ``,
+    linkText: "devpost",
+    year: "2023",
+    backlightColor: "rgba(6, 182, 212, 0.7)",
     displayType: "row"
   },
   {
