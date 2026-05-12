@@ -75,7 +75,7 @@ export const experiences = [
   },
   {
     title: "floato",
-    subtitle: "started a drone photography and videography business at 16 and made lunch money to buy subway",
+    subtitle: "started a drone photography + videography business at 16 and made lunch money to buy subway",
     imageSrc: "/images/floato.webp",
     url: "https://www.youtube.com/@floato6498",
     body: `started a business at 16, providing real estate photography and videography services\n\nsupported by a $3000 grant from the government of ontario`,

@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "been there",
     subtitle: "world-exploration game for your side-quests and your memories",
-    imageSrc: "/images/beenthere.webp",
+    imageSrc: "/images/projects/beenthere.webp",
     url: "https://github.com/SuperZooper3/been-there",
     body: ``,
     linkText: "github",
@@ -13,7 +13,7 @@ export const projects = [
   {
     title: "rolodex",
     subtitle: "ai-driven crm for keeping track of the people you meet",
-    imageSrc: "/images/rolodex.webp",
+    imageSrc: "/images/projects/rolodex.webp",
     url: "https://github.com/iankorovinsky/rolodex",
     body: ``,
     linkText: "github",
@@ -24,7 +24,7 @@ export const projects = [
   {
     title: "cursor on the go",
     subtitle: "a mobile connection to your laptop instance of cursor",
-    imageSrc: "/images/cursoronthego.webp",
+    imageSrc: "/images/projects/cursoronthego.webp",
     url: "https://devpost.com/software/goon-cursor",
     body: `created a mobile app that connects remotely to your cursor instance, allowing you to send prompts and watch responses in real time from anywhere. built with an injectable javascript payload that hooks into the cursor dom, establishing websocket connections to relay messages between mobile frontend and cursor\n\nincludes real-time notifications when prompts complete, auth0 authentication, and stripe payment integration. built at hackutd 2025`,
     linkText: "devpost",
@@ -35,7 +35,7 @@ export const projects = [
   {
     title: "waterloo treasure hunt",
     subtitle: "irl geocaching game w/ cash prizes",
-    imageSrc: "/images/waterlootreasurehunt.webp",
+    imageSrc: "/images/projects/waterlootreasurehunt.webp",
     url: "https://waterlootreasurehunt.ca/",
     body: `built an immersive geocaching experience across waterloo with hidden caches and secret keys scattered throughout the city. players competed to find physical caches using cryptic clues inspired by an explorer's lost diary, logging their finds online to track progress\n\nfeatured prizes for top finishers, first finders, and all participants. powered by zircuit with integrated authentication and payment processing`,
     linkText: "website",
@@ -44,20 +44,9 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "waterloo tech week",
-    subtitle: "a decentralized week of community events in waterloo",
-    imageSrc: "/images/waterlootechweek.webp",
-    url: "https://waterlootechweek.ca/",
-    body: `organized a week-long celebration of waterloo's tech community bringing together builders, founders, and innovators. featured independently hosted talks, demo nights, panels, workshops, and meetups across the city\n\ncreated to showcase what makes waterloo a global leader in technology and entrepreneurship, connecting people with ideas and values that define the community`,
-    linkText: "website",
-    year: "2025",
-    backlightColor: "rgba(59, 130, 246, 0.7)",
-    displayType: "row"
-  },
-  {
     title: "crowdfund",
     subtitle: "crypto hedge fund managed by ai agents",
-    imageSrc: "/images/crowdfund.webp",
+    imageSrc: "/images/projects/crowdfund.webp",
     url: "https://github.com/iankorovinsky/crowdfund",
     body: `created a decentralized crypto trading platform that uses ai agents to automate trading workflows, allowing agents to analyze markets, execute trades, and earn through customizable strategies. supports agent creation with IP protection via story protocol, enabling users to utilize other people's agents, and for developers to receive royalties when their agents are used.\n\nawarded second place (story protocol track, $1500 usd) and best domain name at tartanhacks 2025`,
     linkText: "github",
@@ -68,7 +57,7 @@ export const projects = [
   {
     title: "blocks",
     subtitle: "smart contract compiler for starknet (cairo language)",
-    imageSrc: "/images/blocks.webp",
+    imageSrc: "/images/projects/blocks.webp",
     url: "https://dorahacks.io/buidl/20342",
     body: `built a block-based smart contract builder for starknet's proprietary language cairo\n\nawarded second place overall, best developer tool, and best use of starknet (2nd place, $2000 usd) @ hack western 11, and deployed the public MVP at the starknet hacker house at ethdenver 2025`,
     linkText: "official project",
@@ -77,9 +66,19 @@ export const projects = [
     displayType: "row"
   },
   {
+    title: "waterloo tech week",
+    subtitle: "a decentralized week of community events in waterloo",
+    imageSrc: "/images/projects/waterlootechweek.png",
+    url: "https://waterlootechweek.ca/",
+    body: `organized a week-long celebration of waterloo's tech community bringing together builders, founders, and innovators. featured independently hosted talks, demo nights, panels, workshops, and meetups across the city\n\ncreated to showcase what makes waterloo a global leader in technology and entrepreneurship, connecting people with ideas and values that define the community`,
+    linkText: "website",
+    year: "2025",
+    backlightColor: "rgba(59, 130, 246, 0.7)"
+  },
+  {
     title: "Axiom",
     subtitle: "custom ide for formal proofs",
-    imageSrc: "/images/axiom.webp",
+    imageSrc: "/images/projects/axiom.webp",
     url: "https://x.com/ishaandey_/status/1870977382972273002",
     body: `created an editor for a custom logic language with built-in rich language support & real-time collaboration for group projects\n\nwe created the custom language using the monaco editor library, and included configs for:\n• syntax highlighting\n• code completion (logic rules)\n• definition providers (reference lookups & section boundaries)\n• editor event handlers (auto-line number & reference updates)\n• hover provider\n\nfully custom-built on express, socketio, y.js, and a sqlite database\n\nsupports real-time collaboration, keyboard shortcuts for all major actions, fully customizable colour themes, and granular language feature controls`,
     linkText: "technical breakdown",
@@ -89,7 +88,7 @@ export const projects = [
   {
     title: "lacs",
     subtitle: "mini-compiler written in scala",
-    imageSrc: "/images/lacs.webp",
+    imageSrc: "/images/projects/lacs.webp",
     url: "https://github.com/iankorovinsky/lacs",
     body: `built a functional compiler from scratch in scala, implementing lexical analysis, parsing, semantic analysis, and code generation\n\nsupports variable declarations, control flow, and basic operations`,
     linkText: "github",
@@ -100,7 +99,7 @@ export const projects = [
   {
     title: "sage",
     subtitle: "predicting carbon emissions for progressive climate policy generation",
-    imageSrc: "/images/climax.webp",
+    imageSrc: "/images/projects/climax.webp",
     url: "https://devpost.com/software/sage-5x6ed2",
     body: `developed a machine learning system to predict carbon emissions and generate data-driven climate policy recommendations\n\nbuilt models to forecast emission trends and identify key policy intervention points`,
     linkText: "github",
@@ -111,7 +110,7 @@ export const projects = [
   {
     title: "eyeremember",
     subtitle: "museum of memories for your apple vision pro (built on visionOS sdk launch weekend)",
-    imageSrc: "/images/eyeremember.webp",
+    imageSrc: "/images/projects/eyeremember.webp",
     url: "https://devpost.com/software/eyetunes-29oe6q",
     body: `built a vr gallery that transforms memories and collectibles into immersive 3d experiences on apple vision pro\n\ncreated during visionos sdk release weekend using swift and the visionos sdk. users navigate through memories using gaze control, reliving moments in a virtual museum world\n\nawarded best .tech domain name at qhacks 2024`,
     linkText: "devpost",
@@ -122,7 +121,7 @@ export const projects = [
   {
     title: "nostalg.ai",
     subtitle: "polaroid camera + searchable memories",
-    imageSrc: "/images/nostalgai.webp",
+    imageSrc: "/images/projects/nostalgai.webp",
     url: "https://devpost.com/software/nostalg-ai",
     body: `created a platform for effortlessly searching and preserving memories using text or images\n\nleverages cohere embeddings for semantic search through tagged photos and videos, gpt-4 vision for image understanding, and verbwire for minting memories as nfts on starknet. includes chat with rag to have dynamic conversations with your past\n\nbuilt at uofthacks 11`,
     linkText: "devpost",
@@ -133,7 +132,7 @@ export const projects = [
   {
     title: "spaCey",
     subtitle: "space bounties meet flow blockchain",
-    imageSrc: "/images/spacey.webp",
+    imageSrc: "/images/projects/spacey.webp",
     url: "https://devpost.com/software/spacey-9f3mga",
     body: `built a platform democratizing space exploration by combining gesture-controlled mars rovers with a dao for submitting and claiming bounties\n\nusers earn flow tokens for completing space-related tasks like satellite refueling and colony construction. integrated tensorflow for gesture control neural network and esp32 for rover control\n\nawarded best use of flow and best use of starknet at utra hacks`,
     linkText: "devpost",
@@ -144,7 +143,7 @@ export const projects = [
   {
     title: "teddy.ai",
     subtitle: "talking teddy bear",
-    imageSrc: "/images/teddyai.webp",
+    imageSrc: "/images/projects/teddyai.webp",
     url: "https://devpost.com/software/teddy-ai",
     body: `created an ai-powered companion teddy bear that empowers children with blockchain concepts through nfts and flow tokens\n\nintegrated verbwire api for minting nft memories in real-time, flow blockchain for speech-based transactions, openai llms for natural conversation, and opencv for capturing moments. leveraged starknet mainnet to mint unique teddy bear nfts\n\naddressing the fact that over 45% of children feel lonely often or some of the time. awarded best use of flow (mlh) at deltahacks x`,
     linkText: "devpost",
@@ -155,7 +154,7 @@ export const projects = [
   {
     title: "Portal",
     subtitle: "semantic search for memories",
-    imageSrc: "/images/portal.webp",
+    imageSrc: "/images/projects/portal.webp",
     url: "https://www.youtube.com/watch?v=Vmupugz2M1s",
     body: `created an ai-powered wearable device for semantic search on memories, and experimented with emulating human consciousness\n\nwon finalist at hack the north 2023 and continued to work on the project during buildspace n&w s5 in summer 2024. supported by eigenspace and the velocity cornerstone program`,
     linkText: "live demo",
@@ -165,7 +164,7 @@ export const projects = [
   {
     title: "boat",
     subtitle: "self-driving rc car to deliver food across campus",
-    imageSrc: "/images/boat.webp",
+    imageSrc: "/images/projects/boat.webp",
     url: "https://www.youtube.com/live/cDmraZGkdeY?si=0X-4DQCjDqFBHhiJ&t=1541",
     body: `designed a self-driving rc vehicle with a custom-built controller and a custom-built neural network for object detection and path planning\n\nbuilt to deliver tim hortons from the student life centre to a first-year residence\n\nbuilt as part of the software engineering first-year capstone project`,
     linkText: "technical breakdown",
@@ -176,7 +175,7 @@ export const projects = [
   {
     title: "compAInion",
     subtitle: "clone anyone into a talking hologram",
-    imageSrc: "/images/companion.webp",
+    imageSrc: "/images/projects/companion.webp",
     url: "https://github.com/iankorovinsky/agetech",
     body: ``,
     linkText: "github",
@@ -187,7 +186,7 @@ export const projects = [
   {
     title: "voffice",
     subtitle: "vr coworking spaces for remote teams",
-    imageSrc: "/images/voffice.webp",
+    imageSrc: "/images/projects/voffice.webp",
     url: "https://github.com/16BitNarwhal/Innovation-Challenge",
     body: `developed a virtual reality co-working platform that reimagines remote collaboration through immersive 3d environments and ai-powered startup advisors for remote teams. built using unity and integrated with openai and aws.`,
     linkText: "github",
@@ -198,7 +197,7 @@ export const projects = [
   {
     title: "prehealth.ai",
     subtitle: "intelligent training platform for medical school entrance exams",
-    imageSrc: "/images/prehealth.webp",
+    imageSrc: "/images/projects/prehealth.webp",
     url: "https://prehealth.ai",
     body: ``,
     linkText: "website",
@@ -209,7 +208,7 @@ export const projects = [
   {
     title: "spleef.ai",
     subtitle: "ai for real-time interview prep",
-    imageSrc: "/images/spleef.webp",
+    imageSrc: "/images/projects/spleef.webp",
     url: "https://devpost.com/software/spleef-ai",
     body: ``,
     linkText: "devpost",
@@ -220,7 +219,7 @@ export const projects = [
   {
     title: "visioncraft.ai",
     subtitle: "prompt arduino hacks into existence using cv",
-    imageSrc: "/images/visioncraft.webp",
+    imageSrc: "/images/projects/visioncraft.webp",
     url: "https://devpost.com/software/visiontech-ai",
     body: ``,
     linkText: "devpost",
@@ -231,7 +230,7 @@ export const projects = [
   {
     title: "foundAIr",
     subtitle: "ai-powered business plan generator for founders",
-    imageSrc: "/images/foundair.webp",
+    imageSrc: "/images/projects/foundair.webp",
     url: "https://devpost.com/software/foundair",
     body: ``,
     linkText: "devpost",
@@ -242,7 +241,7 @@ export const projects = [
   {
     title: "fire away",
     subtitle: "gesture-controlled drone for wildfire response",
-    imageSrc: "/images/fireaway.webp",
+    imageSrc: "/images/projects/fireaway.webp",
     url: "https://devpost.com/software/fire-away",
     body: ``,
     linkText: "devpost",
