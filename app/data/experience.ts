@@ -10,16 +10,6 @@ export const experiences = [
     backlightColor: "rgba(74, 222, 128, 0.7)"
   },
   {
-    title: "General Catalyst",
-    subtitle: "angel investing and being a partner to founders",
-    imageSrc: "/images/work/general-catalyst.webp",
-    url: "https://www.generalcatalyst.com",
-    body: `angel investing in early-stage builders and startups, helping founders get their first checks and bring their ideas to life`,
-    linkText: "website",
-    year: "jan 2026 - present",
-    backlightColor: "rgba(236, 72, 153, 0.7)"
-  },
-  {
     title: "Thrive Capital",
     subtitle: "going 0 -> 1 on tooling for venture capital",
     imageSrc: "/images/thrive.webp",
