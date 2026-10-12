@@ -64,6 +64,128 @@ body {
   }
 }
 
+/* Colors from Baseten's brand guide and the HTN / GC official websites. */
+.glitchpop-link--baseten {
+  --glitch-primary: #19e76e;
+  --glitch-secondary: #ffa9fd;
+}
+
+.glitchpop-link--hack-the-north {
+  --glitch-primary: #43afde;
+  --glitch-secondary: #f3675a;
+}
+
+.glitchpop-link--general-catalyst {
+  --glitch-primary: #d399ea;
+  --glitch-secondary: #2a0039;
+}
+
+.glitchpop-link--monochrome {
+  --glitch-primary: #ffffff;
+  --glitch-secondary: #000000;
+}
+
+.glitchpop-link {
+  text-decoration: none;
+}
+
+.glitchpop-word {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.glitchpop-text {
+  display: inline-block;
+}
+
+.glitchpop-text,
+.glitchpop-space {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.glitchpop-slice {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.glitchpop-slice--top {
+  color: var(--glitch-secondary);
+  clip-path: inset(12% -8px 48% -8px);
+}
+
+.glitchpop-initials .glitchpop-text,
+.glitchpop-initials .glitchpop-slice {
+  text-decoration: none;
+}
+
+.glitchpop-slice--bottom {
+  color: var(--glitch-primary);
+  clip-path: inset(55% -8px -6px -8px);
+}
+
+.glitchpop-link:hover,
+.glitchpop-link:focus-visible {
+  color: var(--glitch-primary);
+}
+
+.glitchpop-link:is(:hover, :focus-visible) .glitchpop-text {
+  animation: glitchpop-text 560ms steps(1, end);
+}
+
+.glitchpop-link:is(:hover, :focus-visible) .glitchpop-slice--top {
+  animation: glitchpop-top 560ms steps(1, end);
+}
+
+.glitchpop-link:is(:hover, :focus-visible) .glitchpop-slice--bottom {
+  animation: glitchpop-bottom 560ms steps(1, end);
+}
+
+.glitchpop-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@keyframes glitchpop-text {
+  0%, 22%, 46%, 72%, 100% { transform: none; text-shadow: none; }
+  8% { transform: translate(-1px, 0) skewX(-5deg); text-shadow: 1px 0 var(--glitch-secondary); }
+  16% { transform: translate(1px, 0); }
+  36% { transform: skewX(3deg); text-shadow: -1px 0 var(--glitch-secondary); }
+  58% { transform: translate(-1px, 0); }
+}
+
+@keyframes glitchpop-top {
+  0%, 22%, 46%, 72%, 100% { opacity: 0; transform: none; }
+  8% { opacity: 1; transform: translate(4px, -1px); }
+  16% { opacity: 0.8; transform: translate(-3px, 0); }
+  36% { opacity: 1; transform: translate(2px, 0); }
+  58% { opacity: 0.7; transform: translate(-2px, 0); }
+}
+
+@keyframes glitchpop-bottom {
+  0%, 22%, 46%, 72%, 100% { opacity: 0; transform: none; }
+  8% { opacity: 0.8; transform: translate(-3px, 1px); }
+  16% { opacity: 1; transform: translate(4px, 0); }
+  36% { opacity: 0.8; transform: translate(-2px, 1px); }
+  58% { opacity: 1; transform: translate(2px, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitchpop-link:is(:hover, :focus-visible) .glitchpop-text,
+  .glitchpop-link:is(:hover, :focus-visible) .glitchpop-slice {
+    animation: none;
+  }
+}
+
 .title-subtext{
   color: #FFF;
   text-align: center;
@@ -120,6 +242,94 @@ body {
 
 .about-link:hover {
   color: #a1a1aa;
+}
+
+.about-redacted {
+  position: relative;
+  display: inline-block;
+  padding-inline: 0.25em;
+  clip-path: inset(1px 0);
+  border-radius: 0;
+  background: #d4d4d8;
+  color: transparent;
+  user-select: none;
+}
+
+.about-redacted::before,
+.about-redacted::after {
+  content: "";
+  position: absolute;
+  inset: 1px -5px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-redacted::before {
+  background: repeating-linear-gradient(
+    0deg, #000 0 1px, transparent 1px 3px
+  );
+}
+
+.about-redacted::after {
+  background: #fff;
+  clip-path: polygon(
+    0 12%, 100% 12%, 100% 25%, 0 25%,
+    0 52%, 100% 52%, 100% 68%, 0 68%,
+    0 83%, 100% 83%, 100% 92%, 0 92%
+  );
+}
+
+.about-redacted:hover {
+  animation: glitchpop-redaction 700ms steps(1, end);
+}
+
+.about-redacted:hover::before {
+  animation: redaction-static 700ms steps(1, end);
+}
+
+.about-redacted:hover::after {
+  animation: redaction-slices 700ms steps(1, end);
+}
+
+@keyframes glitchpop-redaction {
+  0%, 28%, 48%, 78%, 100% {
+    transform: none;
+    background: #d4d4d8;
+  }
+  7% { transform: translate(-2px, 0) skewX(-9deg); background: #fff; }
+  14% { transform: translate(2px, 1px) scaleX(0.9); background: #52525b; }
+  21% { transform: translate(-1px, -1px) skewX(6deg); background: #e4e4e7; }
+  39% { transform: translate(1px, 0) scaleX(1.08); background: #a1a1aa; }
+  59% { transform: translate(-2px, 0) skewX(-4deg); background: #fff; }
+  68% { transform: translate(1px, 0); background: #71717a; }
+}
+
+@keyframes redaction-static {
+  0%, 28%, 48%, 78%, 100% { opacity: 0; transform: none; }
+  7% { opacity: 0.85; transform: translateY(-1px); }
+  14% { opacity: 1; transform: translateY(1px); }
+  21% { opacity: 0.5; transform: translateY(-2px); }
+  39% { opacity: 0.9; transform: translateY(2px); }
+  59% { opacity: 0.75; transform: translateY(-1px); }
+  68% { opacity: 0.4; transform: translateY(1px); }
+}
+
+@keyframes redaction-slices {
+  0%, 28%, 48%, 78%, 100% { opacity: 0; transform: none; }
+  7% { opacity: 1; transform: translateX(4px); }
+  14% { opacity: 0.8; transform: translateX(-5px) scaleX(0.7); }
+  21% { opacity: 1; transform: translate(3px, 1px); }
+  39% { opacity: 0.7; transform: translateX(-3px); }
+  59% { opacity: 1; transform: translate(5px, -1px); }
+  68% { opacity: 0.6; transform: translateX(-2px) scaleX(0.85); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-redacted:hover,
+  .about-redacted:hover::before,
+  .about-redacted:hover::after {
+    animation: none;
+  }
 }
 
 /* Polaroid hover effects for about page */

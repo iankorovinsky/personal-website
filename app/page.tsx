@@ -1,42 +1,56 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import ProjectCard from "@/components/ui/project-card";
-import ExperienceRow from "@/components/ui/experience-row";
-import Spotlight from "@/components/ui/spotlight"
+import { Star } from "lucide-react";
 import FilterButtons from "@/components/ui/filter-buttons"
 import AsciiBackground from "@/components/ui/ascii-background"
 import PhotoStack from "@/components/ui/photo-stack"
+import GlitchLink from "@/components/ui/glitch-link"
 import { projects } from "./data/projects"
 import { experiences } from "./data/experience"
 import { community } from "./data/community"
+import { awards } from "./data/awards"
+import { writing } from "./data/writing"
+import { media } from "./data/media"
+
+interface TableItem {
+  title: string;
+  subtitle: string;
+  url: string;
+  year: string;
+  category: string;
+  starred?: boolean;
+  type?: string;
+}
 
 export default function Home() {
-  const [activeFilter, setActiveFilter] = useState<string | null>('work');
+  const [activeFilter, setActiveFilter] = useState<string>('work');
 
-  const allItems = [
+  useEffect(() => {
+    const tab = new URLSearchParams(window.location.search).get('tab');
+    if (tab && ['work', 'projects', 'community', 'awards', 'writing', 'media'].includes(tab)) {
+      setActiveFilter(tab);
+    }
+  }, []);
+
+  const allItems: TableItem[] = [
     ...experiences.map(item => ({ ...item, category: 'work' })),
     ...projects.map(item => ({ ...item, category: 'projects' })),
-    ...community.map(item => ({ ...item, category: 'community' }))
+    ...community.map(item => ({ ...item, category: 'community' })),
+    ...awards.map(item => ({ ...item, category: 'awards' })),
+    ...writing.map(item => ({ ...item, category: 'writing' })),
+    ...media.map(item => ({ ...item, category: 'media' }))
   ];
 
-  const filteredItems = activeFilter === null
-    ? allItems 
-    : allItems.filter(item => item.category === activeFilter);
-
-  const handleFilterChange = (filter: string) => {
-    // Toggle: if clicking the same filter, deselect it (show all)
-    setActiveFilter(activeFilter === filter ? null : filter);
-  };
+  const filteredItems = allItems
+    .filter(item => item.category === activeFilter)
+    .sort((a, b) => Number(Boolean(b.starred)) - Number(Boolean(a.starred)));
 
 
   return (
     <div className="min-h-screen flex flex-col relative bg-black">
       <AsciiBackground />
-      {/* <div className="fixed top-0 left-0 w-screen h-screen pointer-events-none z-[1] opacity-90">
-        <Spotlight />
-      </div> */}
       
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pt-16 md:pt-20 pb-12 md:pb-16 relative z-10">
@@ -46,37 +60,21 @@ export default function Home() {
               Ian Korovinsky
             </h1>
             <p className="hero-description">
-              <span className="block">post-training @ baseten</span>
+              <span className="block">research engineering @ baseten</span>
               <span className="block">software engineering @ university of waterloo</span>
               <span className="block mt-2">
                 i{" "}
-                <a 
-                  href="https://www.baseten.co" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="underline decoration-1 underline-offset-2 hover:opacity-70 transition-opacity"
-                >
-                  build products that solve problems
-                </a>
+                <GlitchLink href="https://www.baseten.co/" brand="baseten">
+                  build reinforcement learning infrastructure for researchers
+                </GlitchLink>
                 , {" "}
-                <a 
-                  href="https://www.hackthenorth.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="underline decoration-1 underline-offset-2 hover:opacity-70 transition-opacity"
-                >
+                <GlitchLink href="https://www.hackthenorth.com/" brand="hack-the-north">
                   host events that bring interesting people together
-                </a>
+                </GlitchLink>
                 , and {" "}
-                <a 
-                  href="https://www.generalcatalyst.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="underline decoration-1 underline-offset-2 hover:opacity-70 transition-opacity"
-                >
-                  support builders at their earliest stages
-                </a>
-                .
+                <GlitchLink href="https://www.generalcatalyst.com/" brand="general-catalyst">
+                  support founders at their earliest stages
+                </GlitchLink>
               </span>
             </p>
             
@@ -130,51 +128,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cards Section */}
+      {/* Work, projects, community, awards, writing, and media */}
       <section className="max-w-7xl mx-auto w-full px-2 md:px-4 pb-12 md:pb-16 relative z-10">
         <FilterButtons 
-          categories={['work', 'projects', 'community']}
+          categories={['work', 'projects', 'community', 'awards', 'writing', 'media']}
           activeFilter={activeFilter}
-          setActiveFilter={handleFilterChange}
+          setActiveFilter={setActiveFilter}
         />
-        {activeFilter === 'writing' ? (
-          <div className="flex justify-center items-center py-16 relative z-20">
-            <p className="text-white text-lg font-light font-secondary">
-              coming soon...
-            </p>
-          </div>
-        ) : (
-          <div className="">
-            {/* Card items */}
-            {filteredItems.filter((item: any) => item.displayType !== 'row').length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems
-                  .filter((item: any) => item.displayType !== 'row')
-                  .map((item, index) => (
-                    <ProjectCard 
-                      key={`card-${item.category}-${item.title}-${index}`}
-                      {...item}
-                    />
-                  ))}
-              </div>
-            )}
-            
-            {/* Row items */}
-            {filteredItems.filter((item: any) => item.displayType === 'row').length > 0 && (
-              <div>
-                {filteredItems
-                  .filter((item: any) => item.displayType === 'row')
-                  .map((item, index, array) => (
-                    <ExperienceRow 
-                      key={`row-${item.category}-${item.title}-${index}`}
-                      {...item}
-                      isLast={index === array.length - 1}
-                    />
-                  ))}
-              </div>
-            )}
-          </div>
-        )}
+        <div className="overflow-x-auto">
+          <table className="w-full text-left font-secondary text-sm">
+            <caption className="sr-only">
+              {activeFilter}
+            </caption>
+            <thead className="border-b border-zinc-800 text-zinc-500">
+              <tr>
+                <th scope="col" className="w-8 py-4 pr-3"><span className="sr-only">starred</span></th>
+                <th scope="col" className="py-4 pr-4 font-normal">{{ work: 'company', projects: 'project', community: 'organization', awards: 'award', writing: 'title', media: 'organization' }[activeFilter] ?? 'name'}</th>
+                <th scope="col" className="py-4 pr-4 font-normal">{activeFilter === 'media' ? 'article' : 'description'}</th>
+                {activeFilter === 'awards' && (
+                  <th scope="col" className="py-4 pr-4 font-normal">type</th>
+                )}
+                <th scope="col" className="py-4 text-right font-normal">{activeFilter === 'media' ? 'year' : 'date'}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-zinc-800/50">
+              {activeFilter === 'media' && filteredItems.length === 0 && (
+                <tr>
+                  <td colSpan={4} className="py-8 font-light text-zinc-500">
+                    coming soon
+                  </td>
+                </tr>
+              )}
+              {filteredItems.map((item, index) => (
+                <tr key={`${item.category}-${item.title}-${index}`}>
+                  <td className="py-5 pr-3 align-top">
+                    {item.starred && (
+                      <>
+                        <Star className="mt-0.5 h-3.5 w-3.5 text-amber-300" fill="currentColor" aria-hidden="true" />
+                        <span className="sr-only">starred</span>
+                      </>
+                    )}
+                  </td>
+                  <th scope="row" className="py-5 pr-4 align-top font-medium text-zinc-200 md:w-1/4">
+                    {item.url ? <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-sm underline-offset-4 hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    >
+                      {item.title}
+                    </a> : item.title}
+                  </th>
+                  <td className="py-5 pr-4 align-top font-light text-zinc-400 leading-relaxed">
+                    {item.subtitle}
+                  </td>
+                  {activeFilter === 'awards' && (
+                    <td className="py-5 pr-4 align-top font-light text-zinc-400">
+                      {item.type}
+                    </td>
+                  )}
+                  <td className="py-5 align-top text-right font-light text-zinc-500 md:whitespace-nowrap">
+                    {item.year}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
       <div className="text-sm font-[var(--font-secondary)] text-center pb-8 text-white flex flex-col gap-2 relative z-10">
         <div>built with ❤️, 🪿, and 🧋 in waterloo</div>

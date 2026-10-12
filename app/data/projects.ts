@@ -33,17 +33,6 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "waterloo treasure hunt",
-    subtitle: "irl geocaching game w/ cash prizes",
-    imageSrc: "/images/projects/waterlootreasurehunt.webp",
-    url: "https://waterlootreasurehunt.ca/",
-    body: `built an immersive geocaching experience across waterloo with hidden caches and secret keys scattered throughout the city. players competed to find physical caches using cryptic clues inspired by an explorer's lost diary, logging their finds online to track progress\n\nfeatured prizes for top finishers, first finders, and all participants. powered by zircuit with integrated authentication and payment processing`,
-    linkText: "website",
-    year: "2025",
-    backlightColor: "rgba(34, 197, 94, 0.7)",
-    displayType: "row"
-  },
-  {
     title: "crowdfund",
     subtitle: "crypto hedge fund managed by ai agents",
     imageSrc: "/images/projects/crowdfund.webp",
@@ -66,17 +55,8 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "waterloo tech week",
-    subtitle: "a decentralized week of community events in waterloo",
-    imageSrc: "/images/projects/waterlootechweek.png",
-    url: "https://waterlootechweek.ca/",
-    body: `organized a week-long celebration of waterloo's tech community bringing together builders, founders, and innovators. featured independently hosted talks, demo nights, panels, workshops, and meetups across the city\n\ncreated to showcase what makes waterloo a global leader in technology and entrepreneurship, connecting people with ideas and values that define the community`,
-    linkText: "website",
-    year: "2025",
-    backlightColor: "rgba(59, 130, 246, 0.7)"
-  },
-  {
-    title: "Axiom",
+    title: "axiom",
+    starred: true,
     subtitle: "custom ide for formal proofs",
     imageSrc: "/images/projects/axiom.webp",
     url: "https://x.com/ishaandey_/status/1870977382972273002",
@@ -109,7 +89,7 @@ export const projects = [
   },
   {
     title: "eyeremember",
-    subtitle: "museum of memories for your apple vision pro (built on visionOS sdk launch weekend)",
+    subtitle: "museum of memories for your apple vision pro (built on visionos sdk launch weekend)",
     imageSrc: "/images/projects/eyeremember.webp",
     url: "https://devpost.com/software/eyetunes-29oe6q",
     body: `built a vr gallery that transforms memories and collectibles into immersive 3d experiences on apple vision pro\n\ncreated during visionos sdk release weekend using swift and the visionos sdk. users navigate through memories using gaze control, reliving moments in a virtual museum world\n\nawarded best .tech domain name at qhacks 2024`,
@@ -130,7 +110,7 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "spaCey",
+    title: "spacey",
     subtitle: "space bounties meet flow blockchain",
     imageSrc: "/images/projects/spacey.webp",
     url: "https://devpost.com/software/spacey-9f3mga",
@@ -152,7 +132,8 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "Portal",
+    title: "portal",
+    starred: true,
     subtitle: "semantic search for memories",
     imageSrc: "/images/projects/portal.webp",
     url: "https://www.youtube.com/watch?v=Vmupugz2M1s",
@@ -163,6 +144,7 @@ export const projects = [
   },
   {
     title: "boat",
+    starred: true,
     subtitle: "self-driving rc car to deliver food across campus",
     imageSrc: "/images/projects/boat.webp",
     url: "https://www.youtube.com/live/cDmraZGkdeY?si=0X-4DQCjDqFBHhiJ&t=1541",
@@ -173,7 +155,7 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "compAInion",
+    title: "compainion",
     subtitle: "clone anyone into a talking hologram",
     imageSrc: "/images/projects/companion.webp",
     url: "https://github.com/iankorovinsky/agetech",
@@ -198,7 +180,7 @@ export const projects = [
     title: "prehealth.ai",
     subtitle: "intelligent training platform for medical school entrance exams",
     imageSrc: "/images/projects/prehealth.webp",
-    url: "https://prehealth.ai",
+    url: "",
     body: ``,
     linkText: "website",
     year: "2023",
@@ -228,7 +210,7 @@ export const projects = [
     displayType: "row"
   },
   {
-    title: "foundAIr",
+    title: "foundair",
     subtitle: "ai-powered business plan generator for founders",
     imageSrc: "/images/projects/foundair.webp",
     url: "https://devpost.com/software/foundair",

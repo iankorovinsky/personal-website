@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import GlitchLink from "@/components/ui/glitch-link"
 
 interface PhotoStackProps {
   images: string[]
@@ -75,12 +75,13 @@ export default function PhotoStack({ images }: PhotoStackProps) {
       </div>
 
       {/* Link below photos */}
-      <Link
+      <GlitchLink
         href="/about"
-        className="text-white hover:text-white/80 font-secondary text-sm underline underline-offset-4 transition-colors"
+        brand="monochrome"
+        className={`text-white font-secondary text-sm transition-transform duration-500 ease-out ${isHovered ? 'translate-y-8' : 'translate-y-0'}`}
       >
         who am i?
-      </Link>
+      </GlitchLink>
     </div>
   )
 }

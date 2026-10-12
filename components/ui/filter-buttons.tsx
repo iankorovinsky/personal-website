@@ -4,17 +4,18 @@ import { Button } from "@/components/ui/button"
 
 interface FilterButtonsProps {
   categories: string[]
-  activeFilter: string | null
+  activeFilter: string
   setActiveFilter: (filter: string) => void
 }
 
 export default function FilterButtons({ categories, activeFilter, setActiveFilter }: FilterButtonsProps) {
   return (
-    <div className="flex gap-4 mb-4 relative z-20">
+    <div className="flex flex-wrap gap-4 mb-4 relative z-20">
       {categories.map((category) => (
         <Button
           key={category}
           variant="default"
+          aria-pressed={activeFilter === category}
           className={`text-white border-white font-[var(--font-primary)] font-weight-300 transition-colors ${
             activeFilter === category 
               ? 'bg-white text-black hover:bg-zinc-100' 
